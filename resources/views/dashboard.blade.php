@@ -1,4 +1,23 @@
 <x-app-layout>
+    <!-- Thêm vào phần hiển thị Dashboard -->
+<div class="mt-8">
+    <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
+        <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
+            <h2 class="text-lg font-bold tracking-tight text-text sm:text-3xl font-heading">Order Statistics</h2>
+            <div class="mt-2">
+                <p class="text-sm-1xl text-gray-500">Total Orders: {{ count($transactions) }}</p>
+                <p class="text-sm-1xl text-gray-500">Total Revenue: 
+                    {{
+                        number_format(collect($transactions)->sum(function($group) {
+                            return $group->sum('total_price');
+                        }), 2)
+                    }} €
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
     <section x-data="dashboard()">
         <div class="py-16 sm:py-24">
             <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">

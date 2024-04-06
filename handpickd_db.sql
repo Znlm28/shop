@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 11:35 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th4 05, 2024 lúc 03:13 AM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `handpickd_db`
+-- Cơ sở dữ liệu: `handpickd_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buyers`
+-- Cấu trúc bảng cho bảng `buyers`
 --
 
 CREATE TABLE `buyers` (
@@ -45,7 +45,7 @@ CREATE TABLE `buyers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `buyers`
+-- Đang đổ dữ liệu cho bảng `buyers`
 --
 
 INSERT INTO `buyers` (`id`, `transaction_id`, `email`, `phone_number`, `first_name`, `last_name`, `address`, `city`, `country`, `state_province`, `postal_code`, `created_at`, `updated_at`, `delivery_method`) VALUES
@@ -79,12 +79,207 @@ INSERT INTO `buyers` (`id`, `transaction_id`, `email`, `phone_number`, `first_na
 (28, 74, 'seweryn_cz@outlook.com', '01590 1137779', 'Seweryn', 'Czabanowski', 'Street 123', 'Berlin', 'Germany', 'Berlin', '13587', '2023-12-01 16:50:03', '2023-12-01 16:50:03', 'Express'),
 (29, 75, 'seweryn_cz@outlook.com', '01590 1137779', 'Seweryn', 'Czabanowski', 'Street 123', 'Berlin', 'Germany', 'Berlin', '13587', '2023-12-01 16:50:03', '2023-12-01 16:50:03', 'Express'),
 (30, 76, 'seweryn_cz@outlook.com', '01590 1137779', 'Seweryn', 'Czabanowski', 'Street 123', 'Berlin', 'Germany', 'Berlin', '13587', '2023-12-01 20:04:03', '2023-12-01 20:04:03', 'Express'),
-(31, 77, 'seweryn_cz@outlook.com', '01590 1137779', 'Seweryn', 'Czabanowski', 'Street 123', 'Berlin', 'Germany', 'Berlin', '13587', '2023-12-04 07:48:28', '2023-12-04 07:48:28', 'Standard');
+(31, 77, 'seweryn_cz@outlook.com', '01590 1137779', 'Seweryn', 'Czabanowski', 'Street 123', 'Berlin', 'Germany', 'Berlin', '13587', '2023-12-04 07:48:28', '2023-12-04 07:48:28', 'Standard'),
+(32, 78, 'phanvinhkhang987@gmail.com', '123456789', 'Khang', 'Torres', 'Binh Thanh', 'HCM city', 'Viet Nam', NULL, '7000', '2024-03-14 17:34:26', '2024-03-14 17:34:26', 'Standard'),
+(33, 79, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-03-15 20:31:19', '2024-03-15 20:31:19', 'Standard'),
+(34, 80, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-03-18 16:59:25', '2024-03-18 16:59:25', 'Express'),
+(35, 81, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan', 'Khang', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-03-18 17:03:53', '2024-03-18 17:03:53', 'Express'),
+(36, 82, 'phanvinhkhang987@gmail.com', '123456789', 'Khang', 'Torres', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-03-31 06:31:47', '2024-03-31 06:31:47', 'Standard'),
+(37, 83, 'phanvinhkhang987@gmail.com', '123456789', 'Khang', 'Torres', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-03-31 06:31:47', '2024-03-31 06:31:47', 'Standard'),
+(38, 84, 'phanvinhkhang0805@gmail.com', '123456789', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-01 07:03:58', '2024-04-01 07:03:58', 'Express'),
+(39, 85, 'phanvinhkhang0805@gmail.com', '123456789', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-01 07:03:58', '2024-04-01 07:03:58', 'Express'),
+(40, 86, 'phanvinhkhang987@gmail.com', '123456789', 'Khang', 'Torres', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-02 06:58:29', '2024-04-02 06:58:29', 'Standard'),
+(41, 87, 'phanvinhkhang0805@gmail.com', '123456789', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:12:14', '2024-04-03 01:12:14', 'Standard'),
+(42, 88, 'phanvinhkhang0805@gmail.com', '123456789', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:12:14', '2024-04-03 01:12:14', 'Standard'),
+(43, 89, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-04-03 01:14:42', '2024-04-03 01:14:42', 'Express'),
+(44, 90, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-04-03 01:14:42', '2024-04-03 01:14:42', 'Express'),
+(45, 91, 'phanvinhkhang0805@gmail.com', '3452167890', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:15:47', '2024-04-03 01:15:47', 'Express'),
+(46, 92, 'phanvinhkhang0805@gmail.com', '3452167890', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:15:47', '2024-04-03 01:15:47', 'Express'),
+(47, 93, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:16:21', '2024-04-03 01:16:21', 'Express'),
+(48, 94, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:16:21', '2024-04-03 01:16:21', 'Express'),
+(49, 95, 'phanvinhkhang0805@gmail.com', '0987654321123', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:17:47', '2024-04-03 01:17:47', 'Standard'),
+(50, 96, 'phanvinhkhang0805@gmail.com', '0987654321123', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:17:47', '2024-04-03 01:17:47', 'Standard'),
+(51, 97, 'phanvinhkhang0805@gmail.com', '0897654321123', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:18:20', '2024-04-03 01:18:20', 'Express'),
+(52, 98, 'phanvinhkhang0805@gmail.com', '0897654321123', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:18:20', '2024-04-03 01:18:20', 'Express'),
+(53, 99, 'phanvinhkhang0805@gmail.com', '093456892', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:19:40', '2024-04-03 01:19:40', 'Standard'),
+(54, 100, 'phanvinhkhang0805@gmail.com', '093456892', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:19:40', '2024-04-03 01:19:40', 'Standard'),
+(55, 101, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:21:24', '2024-04-03 01:21:24', 'Express'),
+(56, 102, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:21:24', '2024-04-03 01:21:24', 'Express'),
+(57, 103, 'phanvinhkhang0805@gmail.com', '03296548609', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:25:28', '2024-04-03 01:25:28', 'Express'),
+(58, 104, 'phanvinhkhang0805@gmail.com', '03296548609', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:25:28', '2024-04-03 01:25:28', 'Express'),
+(59, 105, 'phanvinhkhang0805@gmail.com', '032965486999', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:26:22', '2024-04-03 01:26:22', 'Express'),
+(60, 106, 'phanvinhkhang0805@gmail.com', '032965486999', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:26:22', '2024-04-03 01:26:22', 'Express'),
+(61, 107, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:27:49', '2024-04-03 01:27:49', 'Express'),
+(62, 108, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:27:49', '2024-04-03 01:27:49', 'Express'),
+(63, 109, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:29:00', '2024-04-03 01:29:00', 'Express'),
+(64, 110, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:29:00', '2024-04-03 01:29:00', 'Express'),
+(65, 111, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:30:31', '2024-04-03 01:30:31', 'Express'),
+(66, 112, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:30:31', '2024-04-03 01:30:31', 'Express'),
+(67, 113, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-04-03 01:32:16', '2024-04-03 01:32:16', 'Express'),
+(68, 114, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '70000', '2024-04-03 01:32:16', '2024-04-03 01:32:16', 'Express'),
+(69, 115, 'phanvinhkhang0805@gmail.com', '03296548909', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:33:07', '2024-04-03 01:33:07', 'Express'),
+(70, 116, 'phanvinhkhang0805@gmail.com', '03296548909', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:33:07', '2024-04-03 01:33:07', 'Express'),
+(71, 117, 'phanvinhkhang0805@gmail.com', '032965486890', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:34:52', '2024-04-03 01:34:52', 'Express'),
+(72, 118, 'phanvinhkhang0805@gmail.com', '032965486890', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:34:52', '2024-04-03 01:34:52', 'Express'),
+(73, 119, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:35:51', '2024-04-03 01:35:51', 'Express'),
+(74, 120, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:35:51', '2024-04-03 01:35:51', 'Express'),
+(75, 121, 'phanvinhkhang0805@gmail.com', '23456789999', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:37:16', '2024-04-03 01:37:16', 'Express'),
+(76, 122, 'phanvinhkhang0805@gmail.com', '23456789999', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:37:16', '2024-04-03 01:37:16', 'Express'),
+(77, 123, 'phanvinhkhang0805@gmail.com', '2222222222', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:38:29', '2024-04-03 01:38:29', 'Standard'),
+(78, 124, 'phanvinhkhang0805@gmail.com', '2222222222', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:38:29', '2024-04-03 01:38:29', 'Standard'),
+(79, 125, 'phanvinhkhang0805@gmail.com', '11111111111111', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:40:00', '2024-04-03 01:40:00', 'Express'),
+(80, 126, 'phanvinhkhang0805@gmail.com', '11111111111111', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:40:00', '2024-04-03 01:40:00', 'Express'),
+(81, 127, 'phanvinhkhang0805@gmail.com', '3333333333333', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:43:38', '2024-04-03 01:43:38', 'Express'),
+(82, 128, 'phanvinhkhang0805@gmail.com', '3333333333333', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:43:38', '2024-04-03 01:43:38', 'Express'),
+(83, 129, 'phanvinhkhang0805@gmail.com', '444444444', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:44:15', '2024-04-03 01:44:15', 'Express'),
+(84, 130, 'phanvinhkhang0805@gmail.com', '444444444', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:44:15', '2024-04-03 01:44:15', 'Express'),
+(85, 131, 'phanvinhkhang0805@gmail.com', '55555555555', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:45:24', '2024-04-03 01:45:24', 'Express'),
+(86, 132, 'phanvinhkhang0805@gmail.com', '55555555555', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:45:24', '2024-04-03 01:45:24', 'Express'),
+(87, 133, 'phanvinhkhang0805@gmail.com', '66666666666', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:46:07', '2024-04-03 01:46:07', 'Express'),
+(88, 134, 'phanvinhkhang0805@gmail.com', '66666666666', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:46:07', '2024-04-03 01:46:07', 'Express'),
+(89, 135, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:48:30', '2024-04-03 01:48:30', 'Express'),
+(90, 136, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:48:30', '2024-04-03 01:48:30', 'Express'),
+(91, 137, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:49:28', '2024-04-03 01:49:28', 'Express'),
+(92, 138, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:49:28', '2024-04-03 01:49:28', 'Express'),
+(93, 139, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:50:41', '2024-04-03 01:50:41', 'Express'),
+(94, 140, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:50:41', '2024-04-03 01:50:41', 'Express'),
+(95, 141, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:52:09', '2024-04-03 01:52:09', 'Express'),
+(96, 142, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:52:09', '2024-04-03 01:52:09', 'Express'),
+(97, 143, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:53:20', '2024-04-03 01:53:20', 'Express'),
+(98, 144, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:53:20', '2024-04-03 01:53:20', 'Express'),
+(99, 145, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:55:05', '2024-04-03 01:55:05', 'Express'),
+(100, 146, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:55:05', '2024-04-03 01:55:05', 'Express'),
+(101, 147, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:56:12', '2024-04-03 01:56:12', 'Express'),
+(102, 148, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:56:12', '2024-04-03 01:56:12', 'Express'),
+(103, 149, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:57:19', '2024-04-03 01:57:19', 'Express'),
+(104, 150, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:57:19', '2024-04-03 01:57:19', 'Express'),
+(105, 151, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:58:40', '2024-04-03 01:58:40', 'Express'),
+(106, 152, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-03 01:58:40', '2024-04-03 01:58:40', 'Express'),
+(107, 153, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2800', '2024-04-03 19:46:45', '2024-04-03 19:46:45', 'Express'),
+(108, 154, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2800', '2024-04-03 19:46:45', '2024-04-03 19:46:45', 'Express'),
+(109, 155, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2900', '2024-04-03 19:48:07', '2024-04-03 19:48:07', 'Standard'),
+(110, 156, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2900', '2024-04-03 19:48:07', '2024-04-03 19:48:07', 'Standard'),
+(111, 157, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '8000', '2024-04-03 19:48:53', '2024-04-03 19:48:53', 'Standard'),
+(112, 158, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '7000', '2024-04-03 19:49:36', '2024-04-03 19:49:36', 'Standard'),
+(113, 159, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '8000', '2024-04-03 19:51:09', '2024-04-03 19:51:09', 'Express'),
+(114, 160, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Tay NInh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '8000', '2024-04-03 19:51:09', '2024-04-03 19:51:09', 'Express'),
+(115, 161, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-03 19:51:59', '2024-04-03 19:51:59', 'Express'),
+(116, 162, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-03 19:51:59', '2024-04-03 19:51:59', 'Express'),
+(117, 163, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 19:53:07', '2024-04-03 19:53:07', 'Standard'),
+(118, 164, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 19:53:07', '2024-04-03 19:53:07', 'Standard'),
+(119, 165, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-03 19:54:26', '2024-04-03 19:54:26', 'Express'),
+(120, 166, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-03 19:54:26', '2024-04-03 19:54:26', 'Express'),
+(121, 167, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '7000', '2024-04-03 19:55:07', '2024-04-03 19:55:07', 'Standard'),
+(122, 168, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 19:56:06', '2024-04-03 19:56:06', 'Standard'),
+(123, 169, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 19:57:16', '2024-04-03 19:57:16', 'Express'),
+(124, 170, 'phanvinhkhang0805@gmail.com', '0762758761', 'Nguyen Hoang', 'Ton', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 19:57:16', '2024-04-03 19:57:16', 'Express'),
+(125, 171, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '2900', '2024-04-03 19:58:08', '2024-04-03 19:58:08', 'Standard'),
+(126, 172, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2900', '2024-04-03 20:49:09', '2024-04-03 20:49:09', 'Standard'),
+(127, 173, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-03 20:50:10', '2024-04-03 20:50:10', 'Standard'),
+(128, 174, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-03 20:50:10', '2024-04-03 20:50:10', 'Standard'),
+(129, 175, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'DakLak', '70000', '2024-04-03 20:52:11', '2024-04-03 20:52:11', 'Standard'),
+(130, 176, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'DakLak', '70000', '2024-04-03 20:52:11', '2024-04-03 20:52:11', 'Standard'),
+(131, 177, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'DakLak', '70000', '2024-04-03 20:52:11', '2024-04-03 20:52:11', 'Standard'),
+(132, 178, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 20:53:07', '2024-04-03 20:53:07', 'Standard'),
+(133, 179, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 20:53:07', '2024-04-03 20:53:07', 'Standard'),
+(134, 180, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2929', '2024-04-03 20:53:07', '2024-04-03 20:53:07', 'Standard'),
+(135, 181, 'phanvinhkhang0805@gmail.com', '3452167890', 'Le Tri', 'Bao', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-03 20:53:49', '2024-04-03 20:53:49', 'Standard'),
+(136, 182, 'phanvinhkhang0805@gmail.com', '0329654868', 'Le Tri', 'Bao', 'Tay Ninh', 'Thành phố Tây Ninh', 'Viet Nam', 'Tây Ninh', '2800', '2024-04-03 20:54:27', '2024-04-03 20:54:27', 'Standard'),
+(137, 183, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:19:25', '2024-04-04 17:19:25', 'Standard'),
+(138, 184, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:19:25', '2024-04-04 17:19:25', 'Standard'),
+(139, 185, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:19:25', '2024-04-04 17:19:25', 'Standard'),
+(140, 186, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:21:15', '2024-04-04 17:21:15', 'Standard'),
+(141, 187, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:21:15', '2024-04-04 17:21:15', 'Standard'),
+(142, 188, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:21:15', '2024-04-04 17:21:15', 'Standard'),
+(143, 189, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:22:54', '2024-04-04 17:22:54', 'Express'),
+(144, 190, 'phanvinhkhang0805@gmail.com', '098907654321', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:22:54', '2024-04-04 17:22:54', 'Express'),
+(145, 191, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:24:03', '2024-04-04 17:24:03', 'Standard'),
+(146, 192, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:24:03', '2024-04-04 17:24:03', 'Standard'),
+(147, 193, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:25:23', '2024-04-04 17:25:23', 'Standard'),
+(148, 194, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:25:23', '2024-04-04 17:25:23', 'Standard'),
+(149, 195, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:27:42', '2024-04-04 17:27:42', 'Standard'),
+(150, 196, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:27:42', '2024-04-04 17:27:42', 'Standard'),
+(151, 197, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:28:20', '2024-04-04 17:28:20', 'Standard'),
+(152, 198, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:29:23', '2024-04-04 17:29:23', 'Standard'),
+(153, 199, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:29:23', '2024-04-04 17:29:23', 'Standard'),
+(154, 200, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:30:25', '2024-04-04 17:30:25', 'Standard'),
+(155, 201, 'phanvinhkhang0805@gmail.com', '0329654868', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '70000', '2024-04-04 17:30:25', '2024-04-04 17:30:25', 'Standard'),
+(156, 202, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Hung Vuong', 'BMT', 'Viet Nam', 'DakLak', '2900', '2024-04-04 17:35:18', '2024-04-04 17:35:18', 'Express'),
+(157, 203, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:37:24', '2024-04-04 17:37:24', 'Express'),
+(158, 204, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:37:24', '2024-04-04 17:37:24', 'Express'),
+(159, 205, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:38:31', '2024-04-04 17:38:31', 'Express'),
+(160, 206, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:38:31', '2024-04-04 17:38:31', 'Express'),
+(161, 207, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:39:18', '2024-04-04 17:39:18', 'Express'),
+(162, 208, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:39:18', '2024-04-04 17:39:18', 'Express'),
+(163, 209, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:40:09', '2024-04-04 17:40:09', 'Express'),
+(164, 210, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:40:09', '2024-04-04 17:40:09', 'Express'),
+(165, 211, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:43:06', '2024-04-04 17:43:06', 'Standard'),
+(166, 212, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:43:06', '2024-04-04 17:43:06', 'Standard'),
+(167, 213, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:46:00', '2024-04-04 17:46:00', 'Express'),
+(168, 214, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:46:00', '2024-04-04 17:46:00', 'Express'),
+(169, 215, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:46:31', '2024-04-04 17:46:31', 'Express'),
+(170, 216, 'phanvinhkhang0805@gmail.com', '0762758761', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:46:31', '2024-04-04 17:46:31', 'Express'),
+(171, 217, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:47:09', '2024-04-04 17:47:09', 'Standard'),
+(172, 218, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:47:09', '2024-04-04 17:47:09', 'Standard'),
+(173, 219, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:47:45', '2024-04-04 17:47:45', 'Standard'),
+(174, 220, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:47:45', '2024-04-04 17:47:45', 'Standard'),
+(175, 221, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:48:39', '2024-04-04 17:48:39', 'Standard'),
+(176, 222, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:48:39', '2024-04-04 17:48:39', 'Standard'),
+(177, 223, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:49:21', '2024-04-04 17:49:21', 'Standard'),
+(178, 224, 'phanvinhkhang0805@gmail.com', '2345678901', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:49:21', '2024-04-04 17:49:21', 'Standard'),
+(179, 225, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:49:56', '2024-04-04 17:49:56', 'Express'),
+(180, 226, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:49:56', '2024-04-04 17:49:56', 'Express'),
+(181, 227, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:50:31', '2024-04-04 17:50:31', 'Standard'),
+(182, 228, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:50:31', '2024-04-04 17:50:31', 'Standard'),
+(183, 229, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:52:02', '2024-04-04 17:52:02', 'Express'),
+(184, 230, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 17:52:02', '2024-04-04 17:52:02', 'Express'),
+(185, 231, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:53:00', '2024-04-04 17:53:00', 'Express'),
+(186, 232, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 17:53:00', '2024-04-04 17:53:00', 'Express'),
+(187, 233, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:54:59', '2024-04-04 17:54:59', 'Standard'),
+(188, 234, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:54:59', '2024-04-04 17:54:59', 'Standard'),
+(189, 235, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:56:10', '2024-04-04 17:56:10', 'Express'),
+(190, 236, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:56:10', '2024-04-04 17:56:10', 'Express'),
+(191, 237, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:57:25', '2024-04-04 17:57:25', 'Standard'),
+(192, 238, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 17:57:25', '2024-04-04 17:57:25', 'Standard'),
+(193, 239, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:58:12', '2024-04-04 17:58:12', 'Express'),
+(194, 240, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 17:58:12', '2024-04-04 17:58:12', 'Express'),
+(195, 241, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:59:02', '2024-04-04 17:59:02', 'Express'),
+(196, 242, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:59:02', '2024-04-04 17:59:02', 'Express'),
+(197, 243, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:59:38', '2024-04-04 17:59:38', 'Standard'),
+(198, 244, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 17:59:38', '2024-04-04 17:59:38', 'Standard'),
+(199, 245, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 18:00:42', '2024-04-04 18:00:42', 'Standard'),
+(200, 246, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 18:00:42', '2024-04-04 18:00:42', 'Standard'),
+(201, 247, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:02:25', '2024-04-04 18:02:25', 'Standard'),
+(202, 248, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:02:25', '2024-04-04 18:02:25', 'Standard'),
+(203, 249, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:03:12', '2024-04-04 18:03:12', 'Standard'),
+(204, 250, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:03:12', '2024-04-04 18:03:12', 'Standard'),
+(205, 251, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:03:40', '2024-04-04 18:03:40', 'Standard'),
+(206, 252, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:03:40', '2024-04-04 18:03:40', 'Standard'),
+(207, 253, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:04:51', '2024-04-04 18:04:51', 'Standard'),
+(208, 254, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:04:51', '2024-04-04 18:04:51', 'Standard'),
+(209, 255, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 18:05:58', '2024-04-04 18:05:58', 'Standard'),
+(210, 256, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2800', '2024-04-04 18:05:58', '2024-04-04 18:05:58', 'Standard'),
+(211, 257, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 18:06:50', '2024-04-04 18:06:50', 'Standard'),
+(212, 258, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 18:06:50', '2024-04-04 18:06:50', 'Standard'),
+(213, 259, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 18:07:42', '2024-04-04 18:07:42', 'Standard'),
+(214, 260, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 18:07:42', '2024-04-04 18:07:42', 'Standard'),
+(215, 261, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:08:13', '2024-04-04 18:08:13', 'Standard'),
+(216, 262, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:08:13', '2024-04-04 18:08:13', 'Standard'),
+(217, 263, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:08:59', '2024-04-04 18:08:59', 'Standard'),
+(218, 264, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:08:59', '2024-04-04 18:08:59', 'Standard'),
+(219, 265, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 18:09:33', '2024-04-04 18:09:33', 'Standard'),
+(220, 266, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '8000', '2024-04-04 18:09:33', '2024-04-04 18:09:33', 'Standard'),
+(221, 267, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 18:10:07', '2024-04-04 18:10:07', 'Standard'),
+(222, 268, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2900', '2024-04-04 18:10:07', '2024-04-04 18:10:07', 'Standard'),
+(223, 269, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:10:40', '2024-04-04 18:10:40', 'Standard'),
+(224, 270, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '7000', '2024-04-04 18:10:40', '2024-04-04 18:10:40', 'Standard'),
+(225, 271, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:11:19', '2024-04-04 18:11:19', 'Standard'),
+(226, 272, 'phanvinhkhang0805@gmail.com', '5678912345', 'Phan Vĩnh', 'Khang', 'Binh Thanh', 'HCM city', 'Viet Nam', 'HCM', '2929', '2024-04-04 18:11:19', '2024-04-04 18:11:19', 'Standard');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Cấu trúc bảng cho bảng `categories`
 --
 
 CREATE TABLE `categories` (
@@ -96,7 +291,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `categories`
+-- Đang đổ dữ liệu cho bảng `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
@@ -113,7 +308,7 @@ INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Cấu trúc bảng cho bảng `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -129,7 +324,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -139,7 +334,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `migrations`
+-- Đang đổ dữ liệu cho bảng `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -152,7 +347,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_reset_tokens`
+-- Cấu trúc bảng cho bảng `password_reset_tokens`
 --
 
 CREATE TABLE `password_reset_tokens` (
@@ -161,10 +356,17 @@ CREATE TABLE `password_reset_tokens` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `password_reset_tokens`
+--
+
+INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
+('phanvinhkhang0805@gmail.com', '$2y$12$fH5Oqxqfmri/2N0v6.8Gx.5LAavhST6/twUCC/y2DOXpkSEgMoeVe', '2024-03-18 18:52:33');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Cấu trúc bảng cho bảng `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -183,7 +385,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -199,12 +401,12 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`id`, `artisan_id`, `category_id`, `name`, `description`, `price`, `quantity`, `created_at`, `updated_at`) VALUES
-(4, 1, 1, 'Handmade Wooden Bowl', 'A beautifully carved wooden bowl that serves as a centerpiece.', 60.99, 8, '2023-11-01 16:34:34', '2023-12-04 08:43:59'),
-(11, 16, 3, 'Vintage Leather Wallet', 'A durable and stylish vintage leather wallet.', 29.99, 2, '2023-11-12 09:41:12', '2023-12-01 20:04:03'),
+(4, 1, 1, 'Handmade Wooden Bowl', 'A beautifully carved wooden bowl that serves as a centerpiece.', 60.99, 4, '2023-11-01 16:34:34', '2024-04-02 06:58:29'),
+(11, 16, 3, 'Vintage Leather Wallet', 'A durable and stylish vintage leather wallet.', 29.99, 1, '2023-11-12 09:41:12', '2024-03-31 06:31:47'),
 (12, 16, 4, 'Handwoven Scarf', 'A warm and fashionable handwoven scarf.', 34.99, 1, '2023-11-12 09:41:12', '2023-12-01 15:59:07'),
 (13, 21, 5, 'Artisanal Scented Candles', 'Soothing scented candles made with natural ingredients.', 19.99, 24, '2023-11-12 09:41:12', '2023-11-30 17:37:12'),
 (14, 21, 6, 'Hand-painted Canvas Art', 'Abstract canvas art, perfect for decorating any room.', 89.99, 1, '2023-11-12 09:41:12', '2023-12-01 16:10:49'),
@@ -215,19 +417,120 @@ INSERT INTO `products` (`id`, `artisan_id`, `category_id`, `name`, `description`
 (19, 1, 4, 'Carved Wooden Picture Frame', 'An elegantly carved picture frame, suitable for 5x7 inch photos.', 29.50, 20, '2023-11-17 13:34:53', '2023-11-17 13:34:53'),
 (20, 16, 3, 'Hand-Stitched Leather Belt', 'A classic, durable leather belt, hand-stitched for superior quality.', 35.99, 11, '2023-11-17 13:34:53', '2023-12-04 07:48:28'),
 (21, 16, 3, 'Leather Journal Cover', 'A premium leather journal cover, designed to fit standard-sized notebooks.', 40.00, 10, '2023-11-17 13:34:53', '2023-12-01 16:34:33'),
-(22, 16, 3, 'Leather Phone Case', 'A sleek, handcrafted leather phone case.', 27.99, 21, '2023-11-17 13:34:53', '2023-12-01 16:41:04'),
+(22, 16, 3, 'Leather Phone Case', 'A sleek, handcrafted leather phone case.', 27.99, 20, '2023-11-17 13:34:53', '2024-03-14 17:34:26'),
 (23, 16, 3, 'Vintage Leather Satchel', 'A stylish satchel made from high-quality vintage leather.', 69.99, 8, '2023-11-17 13:34:53', '2023-12-01 16:41:04'),
 (24, 21, 10, 'Handcrafted Soap Set', 'A set of four natural, handcrafted soaps made with organic ingredients.', 24.99, 29, '2023-11-17 13:34:53', '2023-11-23 16:10:14'),
 (25, 21, 10, 'Decorative Throw Pillows', 'A pair of hand-sewn throw pillows, featuring vibrant, artistic designs.', 55.00, 12, '2023-11-17 13:34:53', '2023-11-30 19:01:44'),
 (26, 21, 10, 'Ceramic Coffee Mugs', 'A set of two handcrafted ceramic coffee mugs, each with a unique, rustic design.', 32.99, 19, '2023-11-17 13:34:53', '2023-12-01 16:50:03'),
 (27, 27, 1, 'Engraved Wooden Watch', 'A sophisticated wooden watch with a custom engraving option.', 60.00, 11, '2023-11-17 13:34:53', '2023-12-01 16:50:03'),
 (28, 27, 1, 'Personalized Leather Bookmark', 'A sleek leather bookmark, customizable with your choice of initials or a short message.', 12.99, 37, '2023-11-17 13:34:53', '2023-11-30 18:46:29'),
-(29, 27, 1, 'Hand-Engraved Decorative Plate', 'A stunning, hand-engraved decorative plate, ideal for display or special occasions.', 49.99, 5, '2023-11-17 13:34:53', '2023-11-25 16:59:27');
+(29, 27, 1, 'Hand-Engraved Decorative Plate', 'A stunning, hand-engraved decorative plate, ideal for display or special occasions.', 49.99, 5, '2023-11-17 13:34:53', '2023-11-25 16:59:27'),
+(46, 40, 1, 'Vintage Jacket', 'Jacket', 30.00, 500, '2024-03-18 17:03:15', '2024-04-01 07:07:13'),
+(47, 40, 4, 'Vintage Lamp', 'Beautiful lamp', 16.00, 498, '2024-03-18 17:20:47', '2024-04-03 19:48:07'),
+(49, 40, 6, 'Chicago Boot', 'Gentleman boot', 12.00, 496, '2024-03-31 06:24:15', '2024-04-04 17:59:38'),
+(50, 40, 6, 'Chelsea Boot', 'An exquisite weapon for men', 10.00, 497, '2024-03-31 06:30:14', '2024-04-04 17:59:38'),
+(51, 40, 6, 'Vintage Oversized Jacket', 'Old jacket', 9.00, 496, '2024-03-31 06:35:27', '2024-04-04 17:47:45'),
+(52, 40, 6, 'Racing Jacket Vintage White Nascar Retro Bomber - Jacket Formula 1', 'Ferrari Team Vintage Jacket', 15.00, 497, '2024-03-31 06:38:32', '2024-04-04 17:59:02'),
+(53, 40, 1, 'Bud Fomura 1 Vintage Jacket', 'Bud fomura 1', 12.00, 496, '2024-03-31 06:39:52', '2024-04-04 17:59:02'),
+(54, 40, 6, 'Irelli Formua 1 Vintage Jacket', 'Vintage jacket', 13.00, 498, '2024-03-31 06:42:06', '2024-04-04 17:47:09'),
+(55, 40, 6, 'Honda Racing Jacket', 'Honda jacket', 10.00, 499, '2024-03-31 06:43:42', '2024-04-04 18:05:58'),
+(56, 40, 4, 'Vintage Metal Genie Lamp Classic Home Decor - Creative Ornament', 'Vintage lamp', 20.00, 495, '2024-03-31 06:46:11', '2024-04-04 18:10:40'),
+(57, 40, 4, 'Classic dressing table', 'Classis', 25.00, 496, '2024-03-31 16:51:00', '2024-04-04 18:08:13'),
+(59, 40, 4, 'Classic fan', 'Classic items', 19.00, 495, '2024-03-31 17:56:49', '2024-04-04 18:00:42'),
+(61, 40, 4, 'Luxury lighter', 'Lighter', 32.00, 489, '2024-04-01 06:54:25', '2024-04-04 18:08:59'),
+(62, 40, 4, 'French style thermos', 'Thermos', 18.00, 498, '2024-04-01 06:55:55', '2024-04-04 17:38:31'),
+(63, 40, 4, 'Italian Style Crystal Vase', 'Vase', 25.00, 497, '2024-04-01 06:57:29', '2024-04-04 18:06:50'),
+(64, 40, 4, 'Crystal Wine Decanter', 'Decanter', 22.00, 498, '2024-04-01 06:58:23', '2024-04-04 18:02:25'),
+(65, 40, 4, 'Bright Colored German Style Soap Jars', 'Soap Jars', 17.00, 497, '2024-04-01 07:10:42', '2024-04-04 17:49:56'),
+(66, 40, 4, 'Dark Colored German Style Soap Jars', 'Soap Jars', 17.00, 498, '2024-04-01 07:11:23', '2024-04-04 17:49:56'),
+(68, 40, 4, 'Black Luxury Chopsticks', 'Luxury Chopsticks', 12.00, 495, '2024-04-01 07:13:37', '2024-04-04 18:08:59'),
+(69, 40, 4, 'Luxury Cigar Ashtray', 'Cigar Ashtray', 18.00, 498, '2024-04-01 07:14:28', '2024-04-03 19:57:16'),
+(70, 40, 1, 'Scented Candle Holder', 'Candle Holder', 11.00, 498, '2024-04-01 07:16:30', '2024-04-04 17:37:24'),
+(71, 40, 4, 'Luxury Tissue Box', 'Tissue Box', 15.00, 498, '2024-04-01 07:17:42', '2024-04-04 17:49:21'),
+(72, 40, 4, 'Jewelry Box', 'Jewelry Box', 17.00, 499, '2024-04-01 07:19:05', '2024-04-04 17:49:21'),
+(73, 40, 1, 'Chessboard', 'Family Games', 21.00, 496, '2024-04-01 18:24:15', '2024-04-04 18:07:42'),
+(74, 40, 1, 'Metal Water Bottle', 'Water Bottle', 19.00, 494, '2024-04-01 18:25:09', '2024-04-04 17:58:12'),
+(75, 40, 4, 'Large Vase', 'Vase', 13.00, 496, '2024-04-01 18:27:06', '2024-04-04 18:07:42'),
+(76, 40, 4, 'Small Vase', 'Vase', 11.00, 496, '2024-04-01 18:27:37', '2024-04-04 18:09:33'),
+(77, 40, 4, 'Classic Flower Vase', 'Classic Flower Vase', 15.00, 497, '2024-04-01 18:28:38', '2024-04-04 18:04:51'),
+(78, 40, 4, 'Dark Colored France Style Soap Jars', 'Soap Jars', 19.00, 495, '2024-04-01 18:29:59', '2024-04-04 18:09:33'),
+(79, 40, 1, 'Brightly colored French Soap Jar', 'Soap Jar', 19.00, 498, '2024-04-01 18:31:08', '2024-04-04 17:54:59'),
+(80, 40, 4, 'Pink French Soap Bottle', 'Soap Bottle', 18.00, 499, '2024-04-01 18:31:46', '2024-04-04 18:03:12'),
+(81, 40, 4, 'Marble Soap Jar', 'Soap Jar', 22.00, 499, '2024-04-01 18:33:32', '2024-04-04 17:52:02'),
+(82, 40, 4, 'Metal Dinnerware Set', 'Dinnerware Set', 20.00, 498, '2024-04-01 18:34:43', '2024-04-04 17:57:25'),
+(83, 40, 1, 'Chopsticks Utensils', 'Chopsticks Utensils', 5.00, 497, '2024-04-01 18:35:44', '2024-04-04 17:50:31'),
+(84, 40, 3, 'Triangle Diamond Earrings', 'Diamond Earrings', 170.00, 497, '2024-04-01 18:36:38', '2024-04-04 17:53:00'),
+(85, 40, 4, 'French Style Essential Oil Bottle', 'Essential Oil Bottle', 15.00, 498, '2024-04-01 18:37:41', '2024-04-04 17:57:25'),
+(86, 40, 4, 'Star Pattern Water Cup', 'Water Cup', 8.00, 499, '2024-04-01 18:39:19', '2024-04-04 18:10:07'),
+(87, 40, 4, 'Coin Pattern Water Cup', 'Water Cup', 8.00, 499, '2024-04-01 18:40:39', '2024-04-03 01:35:51'),
+(88, 40, 4, 'Black and White Pattern Water Cup', 'Water Cup', 7.00, 498, '2024-04-01 18:41:32', '2024-04-04 18:10:07'),
+(89, 40, 4, 'Round Pattern Water Cup', 'Water Cup', 7.00, 500, '2024-04-01 18:42:08', '2024-04-01 18:42:08'),
+(90, 40, 4, 'Black Striped Pattern Water Cup', 'Water Cup', 7.00, 499, '2024-04-01 18:42:37', '2024-04-04 17:19:25'),
+(91, 40, 1, 'Reggio Essential Oil Bottle', 'Essential Oil Bottle', 25.00, 499, '2024-04-01 18:43:34', '2024-04-03 01:25:28'),
+(92, 40, 4, 'Maduray Essential Oil Bottle', 'Essential Oil Bottle', 25.00, 499, '2024-04-01 18:44:09', '2024-04-03 01:25:28'),
+(93, 40, 4, 'La Recharge Essential Oil Bottle', 'Essential Oil Bottle', 26.00, 500, '2024-04-01 18:45:08', '2024-04-01 18:45:08'),
+(94, 40, 4, 'Cire Trvdon Essential Oil Bottle', 'Essential Oil Bottle', 30.00, 499, '2024-04-01 18:46:22', '2024-04-04 17:21:15'),
+(95, 40, 4, 'Essential Oil Bottle', 'Essential Oil Bottle', 22.00, 499, '2024-04-01 18:46:54', '2024-04-03 01:48:30'),
+(96, 40, 4, 'Candle Holders', 'Candle Holders', 15.00, 499, '2024-04-01 18:47:47', '2024-04-03 01:48:30'),
+(97, 40, 3, 'Classic Watch', 'For Man', 25.00, 496, '2024-04-01 18:49:05', '2024-04-04 18:11:19'),
+(98, 40, 1, 'Floral Pattern Plate 1', 'Plate', 8.00, 499, '2024-04-01 18:49:59', '2024-04-03 01:52:09'),
+(99, 40, 4, 'Floral Pattern Plate 2', 'Plate', 7.00, 498, '2024-04-01 18:50:34', '2024-04-04 17:25:23'),
+(100, 40, 4, 'Red Luxury Chopsticks', 'Luxury Chopsticks', 12.00, 500, '2024-04-01 18:53:10', '2024-04-01 18:53:10'),
+(101, 40, 4, 'White Luxury Chopsticks', 'Luxury Chopsticks', 12.00, 499, '2024-04-01 18:53:27', '2024-04-03 19:55:07'),
+(102, 40, 4, 'Luxury Ashtray', 'Ashtray', 14.00, 499, '2024-04-01 18:54:52', '2024-04-04 18:11:19'),
+(103, 40, 4, 'France Luxury Ashtray', 'Luxury Ashtray', 18.00, 498, '2024-04-01 18:55:33', '2024-04-04 18:10:40'),
+(104, 40, 1, 'Small Wooden Box', 'Wooden Box', 12.00, 499, '2024-04-01 18:56:31', '2024-04-03 01:37:16'),
+(105, 40, 1, 'Mail Box', 'Mail Box', 10.00, 499, '2024-04-01 18:57:28', '2024-04-04 18:03:40'),
+(106, 40, 4, 'Green Tissue Box', 'Tissue Box', 14.00, 499, '2024-04-01 18:58:09', '2024-04-04 17:28:20'),
+(107, 40, 4, 'Pink Tissue Box', 'Tissue Box', 14.00, 500, '2024-04-01 18:58:45', '2024-04-01 18:59:02'),
+(108, 40, 4, 'Yellow Tissue Box', 'Tissue Box', 14.00, 500, '2024-04-01 18:59:28', '2024-04-01 18:59:28'),
+(109, 40, 4, 'Tissue Box', 'Tissue Box', 14.00, 497, '2024-04-01 18:59:47', '2024-04-04 17:56:10'),
+(110, 40, 1, 'Purple Tissue Box', 'Tissue Box', 14.00, 496, '2024-04-01 19:00:05', '2024-04-04 17:56:10'),
+(111, 40, 4, 'Large Jewelry Box', 'Jewelry Box', 18.00, 500, '2024-04-01 19:00:44', '2024-04-01 19:00:44'),
+(112, 40, 4, 'Spice jars', 'Spice jars', 9.00, 499, '2024-04-01 19:02:12', '2024-04-04 18:03:40'),
+(113, 40, 4, 'Wooden Tray', 'Tray', 11.00, 500, '2024-04-01 19:02:58', '2024-04-01 19:02:58'),
+(114, 40, 4, 'Glass Tray', 'Tray', 19.00, 500, '2024-04-01 19:03:34', '2024-04-01 19:03:34'),
+(115, 40, 4, 'Black Large Wooden Tray', 'Large Wooden Tray', 20.00, 498, '2024-04-02 03:02:27', '2024-04-04 17:29:23'),
+(116, 40, 4, 'Brown Large Wooden Tray', 'Large Wooden Tray', 20.00, 499, '2024-04-02 03:02:58', '2024-04-03 01:44:15'),
+(117, 40, 4, 'Tray Toothbrush', 'Tray Toothbrush', 18.00, 498, '2024-04-02 03:04:29', '2024-04-03 01:50:41'),
+(118, 40, 4, 'Metal Food Tray', 'Food Tray', 27.00, 499, '2024-04-02 03:05:27', '2024-04-03 01:49:28'),
+(119, 40, 4, 'Paper Tray', 'Paper Tray', 14.00, 499, '2024-04-02 03:06:00', '2024-04-04 17:29:23'),
+(120, 40, 4, 'Green Soap Tray', 'Soap Tray', 15.00, 499, '2024-04-02 03:07:51', '2024-04-03 01:43:38'),
+(121, 40, 4, 'Pink Soap Tray', 'Soap Tray', 14.00, 500, '2024-04-02 03:08:10', '2024-04-02 03:08:10'),
+(122, 40, 1, 'Wooden Photo Frame', 'Photo Frame', 8.00, 498, '2024-04-02 03:09:33', '2024-04-04 17:22:54'),
+(123, 40, 3, 'Silver Necklaces and Earrings', 'Silver Necklaces and Earrings', 50.00, 496, '2024-04-02 03:10:27', '2024-04-03 20:53:07'),
+(124, 40, 4, 'Salt Shaker', 'Salt shaker', 18.00, 498, '2024-04-02 03:11:36', '2024-04-04 17:25:23'),
+(125, 40, 1, 'Pink Crystal Cup', 'Crystal Cup', 17.00, 500, '2024-04-02 03:12:32', '2024-04-02 03:12:32'),
+(126, 40, 4, 'Blue Crystal Cup', 'Crystal Cup', 17.00, 499, '2024-04-02 03:12:56', '2024-04-04 17:24:03'),
+(127, 40, 4, 'Green Crystal Cup', 'Crystal Cup', 17.00, 500, '2024-04-02 03:13:41', '2024-04-02 03:13:41'),
+(128, 40, 4, 'Green Low Crystal Glass', 'Low Crystal Glass', 16.00, 499, '2024-04-02 03:14:33', '2024-04-03 01:50:41'),
+(129, 40, 4, 'Blue Low Crystal Glass', 'Low Crystal Glass', 16.00, 499, '2024-04-02 03:14:59', '2024-04-04 17:24:03'),
+(130, 40, 4, 'France Scented Candles', 'Scented Candles', 19.00, 499, '2024-04-02 03:16:01', '2024-04-03 01:46:07'),
+(131, 40, 4, 'Italian Scented Candles', 'Scented Candles', 22.00, 499, '2024-04-02 03:16:44', '2024-04-03 01:46:07'),
+(132, 40, 4, 'England Scented Candles', 'Scented Candles', 20.00, 499, '2024-04-02 03:18:36', '2024-04-03 20:52:11'),
+(133, 40, 4, 'Pot', 'Pot', 19.00, 499, '2024-04-02 03:19:08', '2024-04-04 17:27:42'),
+(134, 40, 3, 'Blue Crystal Ring', 'Crystal Ring', 30.00, 498, '2024-04-02 03:20:03', '2024-04-03 20:54:27'),
+(135, 40, 3, 'Silver Rings And Bracelets', 'Silver Rings And Bracelets', 33.00, 497, '2024-04-02 03:20:43', '2024-04-04 17:46:00'),
+(136, 40, 4, 'Hamper', 'Hamper', 23.00, 500, '2024-04-02 03:21:56', '2024-04-02 03:21:56'),
+(137, 40, 4, 'Recycle Bin', 'Recycle Bin', 13.00, 500, '2024-04-02 03:22:47', '2024-04-02 03:22:47'),
+(138, 40, 4, 'Metal Seed Tray', 'Seed Tray', 18.00, 500, '2024-04-02 03:23:35', '2024-04-02 03:23:35'),
+(139, 40, 4, 'Egg Tray', 'Egg Tray', 22.00, 499, '2024-04-02 03:24:29', '2024-04-04 17:27:42'),
+(140, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 500, '2024-04-02 03:25:22', '2024-04-02 03:25:22'),
+(141, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 499, '2024-04-02 03:25:41', '2024-04-03 01:30:31'),
+(142, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 499, '2024-04-02 03:25:56', '2024-04-03 01:30:31'),
+(143, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 500, '2024-04-02 03:26:13', '2024-04-02 03:26:13'),
+(144, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 497, '2024-04-02 03:26:37', '2024-04-04 17:30:25'),
+(145, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 499, '2024-04-02 03:26:55', '2024-04-03 01:45:24'),
+(147, 40, 4, 'Decorative Statue', 'Decorative Statue', 25.00, 499, '2024-04-02 03:27:28', '2024-04-04 17:30:25'),
+(148, 40, 4, 'Crystal Decorative Statue', 'Decorative Statue', 30.00, 498, '2024-04-02 03:28:17', '2024-04-03 01:58:40'),
+(149, 40, 4, 'Crystak Decorative Statue', 'Decorative Statue', 30.00, 499, '2024-04-02 03:28:37', '2024-04-03 01:58:40'),
+(150, 40, 4, 'Metal Trash Can', 'Metal Trash Can', 18.00, 499, '2024-04-02 03:30:32', '2024-04-03 01:34:52'),
+(151, 40, 3, 'Diamond Ring', 'Ring', 500.00, 497, '2024-04-02 07:20:41', '2024-04-04 17:46:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_images`
+-- Cấu trúc bảng cho bảng `product_images`
 --
 
 CREATE TABLE `product_images` (
@@ -243,7 +546,7 @@ CREATE TABLE `product_images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `product_images`
+-- Đang đổ dữ liệu cho bảng `product_images`
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `image_path`, `alt_text`, `created_at`, `updated_at`, `resized_image_path`, `show_image_path`, `thumbnail_image_path`) VALUES
@@ -268,12 +571,113 @@ INSERT INTO `product_images` (`id`, `product_id`, `image_path`, `alt_text`, `cre
 (73, 28, 'product_images/product_1700239687_original.webp', 'A sleek leather bookmark, customizable with your choice of initials or a short message.', '2023-11-17 15:48:10', '2023-11-21 17:01:34', 'product_images/product_1700239687_resized.webp', 'product_images/product_1700239687_show.webp', 'product_images/product_1700239687_thumbnail.webp'),
 (74, 29, 'product_images/product_1700239767_original.webp', 'A stunning, hand-engraved decorative plate, ideal for display or special occasions.', '2023-11-17 15:49:29', '2023-11-21 17:01:34', 'product_images/product_1700239767_resized.webp', 'product_images/product_1700239767_show.webp', 'product_images/product_1700239767_thumbnail.webp'),
 (75, 11, 'product_images/product_1700585995_original.webp', 'A durable and stylish vintage leather wallet.', '2023-11-21 16:00:00', '2023-11-21 16:00:00', 'product_images/product_1700585995_resized.webp', 'product_images/product_1700585995_show.webp', 'product_images/product_1700585995_thumbnail.webp'),
-(82, 4, 'product_images/product_1701189156_original.webp', 'A beautifully carved wooden bowl that serves as a centerpiece.', '2023-11-28 15:32:40', '2023-11-28 15:32:40', 'product_images/product_1701189156_resized.webp', 'product_images/product_1701189156_show.webp', 'product_images/product_1701189156_thumbnail.webp');
+(82, 4, 'product_images/product_1701189156_original.webp', 'A beautifully carved wooden bowl that serves as a centerpiece.', '2023-11-28 15:32:40', '2023-11-28 15:32:40', 'product_images/product_1701189156_resized.webp', 'product_images/product_1701189156_show.webp', 'product_images/product_1701189156_thumbnail.webp'),
+(97, 46, 'product_images/product_1710806595_original.webp', 'Vintage Jacket', '2024-03-18 17:03:16', '2024-03-18 17:03:16', 'product_images/product_1710806595_resized.webp', 'product_images/product_1710806595_show.webp', 'product_images/product_1710806595_thumbnail.webp'),
+(98, 47, 'product_images/product_1710807647_original.webp', 'Vintage Lamp', '2024-03-18 17:20:48', '2024-03-18 17:20:48', 'product_images/product_1710807647_resized.webp', 'product_images/product_1710807647_show.webp', 'product_images/product_1710807647_thumbnail.webp'),
+(100, 49, 'product_images/product_1711891455_original.webp', 'Black Boot', '2024-03-31 06:24:16', '2024-03-31 06:24:16', 'product_images/product_1711891455_resized.webp', 'product_images/product_1711891455_show.webp', 'product_images/product_1711891455_thumbnail.webp'),
+(101, 50, 'product_images/product_1711891814_original.webp', 'Chelsea Boot', '2024-03-31 06:30:15', '2024-03-31 06:30:15', 'product_images/product_1711891814_resized.webp', 'product_images/product_1711891814_show.webp', 'product_images/product_1711891814_thumbnail.webp'),
+(102, 51, 'product_images/product_1711892127_original.webp', 'Vintage Oversized Jacket', '2024-03-31 06:35:27', '2024-03-31 06:35:27', 'product_images/product_1711892127_resized.webp', 'product_images/product_1711892127_show.webp', 'product_images/product_1711892127_thumbnail.webp'),
+(103, 52, 'product_images/product_1711892312_original.webp', 'Racing Jacket Vintage White Nascar Retro Bomber - Jacket Formula 1', '2024-03-31 06:38:32', '2024-03-31 06:38:32', 'product_images/product_1711892312_resized.webp', 'product_images/product_1711892312_show.webp', 'product_images/product_1711892312_thumbnail.webp'),
+(104, 53, 'product_images/product_1711892392_original.webp', 'Bud Fomura 1 Vintage Jacket', '2024-03-31 06:39:52', '2024-03-31 06:39:52', 'product_images/product_1711892392_resized.webp', 'product_images/product_1711892392_show.webp', 'product_images/product_1711892392_thumbnail.webp'),
+(105, 54, 'product_images/product_1711892526_original.webp', 'Irelli Formua 1 Vintage Jacket', '2024-03-31 06:42:06', '2024-03-31 06:42:06', 'product_images/product_1711892526_resized.webp', 'product_images/product_1711892526_show.webp', 'product_images/product_1711892526_thumbnail.webp'),
+(106, 55, 'product_images/product_1711892622_original.webp', 'Honda Racing Jacket', '2024-03-31 06:43:43', '2024-03-31 06:43:43', 'product_images/product_1711892622_resized.webp', 'product_images/product_1711892622_show.webp', 'product_images/product_1711892622_thumbnail.webp'),
+(107, 56, 'product_images/product_1711892771_original.webp', 'Vintage Metal Genie Lamp Classic Home Decor - Creative Ornament', '2024-03-31 06:46:11', '2024-03-31 06:46:11', 'product_images/product_1711892771_resized.webp', 'product_images/product_1711892771_show.webp', 'product_images/product_1711892771_thumbnail.webp'),
+(108, 57, 'product_images/product_1711929060_original.webp', 'Classic dressing table', '2024-03-31 16:51:01', '2024-03-31 16:51:01', 'product_images/product_1711929060_resized.webp', 'product_images/product_1711929060_show.webp', 'product_images/product_1711929060_thumbnail.webp'),
+(110, 59, 'product_images/product_1711933009_original.webp', 'Classic fan', '2024-03-31 17:56:49', '2024-03-31 17:56:49', 'product_images/product_1711933009_resized.webp', 'product_images/product_1711933009_show.webp', 'product_images/product_1711933009_thumbnail.webp'),
+(112, 61, 'product_images/product_1711979665_original.webp', 'Luxury lighter', '2024-04-01 06:54:26', '2024-04-01 06:54:26', 'product_images/product_1711979665_resized.webp', 'product_images/product_1711979665_show.webp', 'product_images/product_1711979665_thumbnail.webp'),
+(113, 62, 'product_images/product_1711979755_original.webp', 'French style thermos', '2024-04-01 06:55:55', '2024-04-01 06:55:55', 'product_images/product_1711979755_resized.webp', 'product_images/product_1711979755_show.webp', 'product_images/product_1711979755_thumbnail.webp'),
+(114, 63, 'product_images/product_1711979849_original.webp', 'Italian Style Crystal Vase', '2024-04-01 06:57:29', '2024-04-01 06:57:29', 'product_images/product_1711979849_resized.webp', 'product_images/product_1711979849_show.webp', 'product_images/product_1711979849_thumbnail.webp'),
+(115, 64, 'product_images/product_1711979903_original.webp', 'Crystal Wine Decanter', '2024-04-01 06:58:23', '2024-04-01 06:58:23', 'product_images/product_1711979903_resized.webp', 'product_images/product_1711979903_show.webp', 'product_images/product_1711979903_thumbnail.webp'),
+(116, 65, 'product_images/product_1711980642_original.webp', 'Bright Colored German Style Soap Jars', '2024-04-01 07:10:42', '2024-04-01 07:10:42', 'product_images/product_1711980642_resized.webp', 'product_images/product_1711980642_show.webp', 'product_images/product_1711980642_thumbnail.webp'),
+(117, 66, 'product_images/product_1711980683_original.webp', 'Dark Colored German Style Soap Jars', '2024-04-01 07:11:23', '2024-04-01 07:11:23', 'product_images/product_1711980683_resized.webp', 'product_images/product_1711980683_show.webp', 'product_images/product_1711980683_thumbnail.webp'),
+(119, 68, 'product_images/product_1711980817_original.webp', 'Black Luxury Chopsticks', '2024-04-01 07:13:38', '2024-04-01 07:13:38', 'product_images/product_1711980817_resized.webp', 'product_images/product_1711980817_show.webp', 'product_images/product_1711980817_thumbnail.webp'),
+(120, 69, 'product_images/product_1711980868_original.webp', 'Luxury Cigar Ashtray', '2024-04-01 07:14:28', '2024-04-01 07:14:28', 'product_images/product_1711980868_resized.webp', 'product_images/product_1711980868_show.webp', 'product_images/product_1711980868_thumbnail.webp'),
+(121, 70, 'product_images/product_1711980990_original.webp', 'Scented Candle Holder', '2024-04-01 07:16:30', '2024-04-01 07:16:30', 'product_images/product_1711980990_resized.webp', 'product_images/product_1711980990_show.webp', 'product_images/product_1711980990_thumbnail.webp'),
+(122, 71, 'product_images/product_1711981062_original.webp', 'Luxury Tissue Box', '2024-04-01 07:17:43', '2024-04-01 07:17:43', 'product_images/product_1711981062_resized.webp', 'product_images/product_1711981062_show.webp', 'product_images/product_1711981062_thumbnail.webp'),
+(123, 72, 'product_images/product_1711981145_original.webp', 'Jewelry Box', '2024-04-01 07:19:06', '2024-04-01 07:19:06', 'product_images/product_1711981145_resized.webp', 'product_images/product_1711981145_show.webp', 'product_images/product_1711981145_thumbnail.webp'),
+(124, 73, 'product_images/product_1712021055_original.webp', 'Chessboard', '2024-04-01 18:24:16', '2024-04-01 18:24:16', 'product_images/product_1712021055_resized.webp', 'product_images/product_1712021055_show.webp', 'product_images/product_1712021055_thumbnail.webp'),
+(125, 74, 'product_images/product_1712021109_original.webp', 'Metal Water Bottle', '2024-04-01 18:25:09', '2024-04-01 18:25:09', 'product_images/product_1712021109_resized.webp', 'product_images/product_1712021109_show.webp', 'product_images/product_1712021109_thumbnail.webp'),
+(126, 75, 'product_images/product_1712021226_original.webp', 'Large Vase', '2024-04-01 18:27:07', '2024-04-01 18:27:07', 'product_images/product_1712021226_resized.webp', 'product_images/product_1712021226_show.webp', 'product_images/product_1712021226_thumbnail.webp'),
+(127, 76, 'product_images/product_1712021257_original.webp', 'Small Vase', '2024-04-01 18:27:38', '2024-04-01 18:27:38', 'product_images/product_1712021257_resized.webp', 'product_images/product_1712021257_show.webp', 'product_images/product_1712021257_thumbnail.webp'),
+(128, 77, 'product_images/product_1712021318_original.webp', 'Classic Flower Vase', '2024-04-01 18:28:39', '2024-04-01 18:28:39', 'product_images/product_1712021318_resized.webp', 'product_images/product_1712021318_show.webp', 'product_images/product_1712021318_thumbnail.webp'),
+(129, 78, 'product_images/product_1712021400_original.webp', 'Dark Colored France Style Soap Jars', '2024-04-01 18:30:00', '2024-04-01 18:30:00', 'product_images/product_1712021400_resized.webp', 'product_images/product_1712021400_show.webp', 'product_images/product_1712021400_thumbnail.webp'),
+(130, 79, 'product_images/product_1712021468_original.webp', 'Brightly colored French Soap Jar', '2024-04-01 18:31:09', '2024-04-01 18:31:09', 'product_images/product_1712021468_resized.webp', 'product_images/product_1712021468_show.webp', 'product_images/product_1712021468_thumbnail.webp'),
+(131, 80, 'product_images/product_1712021506_original.webp', 'Pink French Soap Bottle', '2024-04-01 18:31:46', '2024-04-01 18:31:46', 'product_images/product_1712021506_resized.webp', 'product_images/product_1712021506_show.webp', 'product_images/product_1712021506_thumbnail.webp'),
+(132, 81, 'product_images/product_1712021612_original.webp', 'Marble Soap Jar', '2024-04-01 18:33:32', '2024-04-01 18:33:32', 'product_images/product_1712021612_resized.webp', 'product_images/product_1712021612_show.webp', 'product_images/product_1712021612_thumbnail.webp'),
+(133, 82, 'product_images/product_1712021683_original.webp', 'Metal Dinnerware Set', '2024-04-01 18:34:43', '2024-04-01 18:34:43', 'product_images/product_1712021683_resized.webp', 'product_images/product_1712021683_show.webp', 'product_images/product_1712021683_thumbnail.webp'),
+(134, 83, 'product_images/product_1712021744_original.webp', 'Chopsticks Utensils', '2024-04-01 18:35:45', '2024-04-01 18:35:45', 'product_images/product_1712021744_resized.webp', 'product_images/product_1712021744_show.webp', 'product_images/product_1712021744_thumbnail.webp'),
+(135, 84, 'product_images/product_1712021798_original.webp', 'Triangle Diamond Earrings', '2024-04-01 18:36:39', '2024-04-01 18:36:39', 'product_images/product_1712021798_resized.webp', 'product_images/product_1712021798_show.webp', 'product_images/product_1712021798_thumbnail.webp'),
+(136, 85, 'product_images/product_1712021861_original.webp', 'French Style Essential Oil Bottle', '2024-04-01 18:37:42', '2024-04-01 18:37:42', 'product_images/product_1712021861_resized.webp', 'product_images/product_1712021861_show.webp', 'product_images/product_1712021861_thumbnail.webp'),
+(137, 86, 'product_images/product_1712021959_original.webp', 'Star Pattern Water Cup', '2024-04-01 18:39:19', '2024-04-01 18:39:19', 'product_images/product_1712021959_resized.webp', 'product_images/product_1712021959_show.webp', 'product_images/product_1712021959_thumbnail.webp'),
+(138, 87, 'product_images/product_1712022039_original.webp', 'Coin Pattern Water Cup', '2024-04-01 18:40:40', '2024-04-01 18:40:40', 'product_images/product_1712022039_resized.webp', 'product_images/product_1712022039_show.webp', 'product_images/product_1712022039_thumbnail.webp'),
+(139, 88, 'product_images/product_1712022092_original.webp', 'Black and White Pattern Water Cup', '2024-04-01 18:41:32', '2024-04-01 18:41:32', 'product_images/product_1712022092_resized.webp', 'product_images/product_1712022092_show.webp', 'product_images/product_1712022092_thumbnail.webp'),
+(140, 89, 'product_images/product_1712022128_original.webp', 'Round Pattern Water Cup', '2024-04-01 18:42:08', '2024-04-01 18:42:08', 'product_images/product_1712022128_resized.webp', 'product_images/product_1712022128_show.webp', 'product_images/product_1712022128_thumbnail.webp'),
+(141, 90, 'product_images/product_1712022157_original.webp', 'Black Striped Pattern Water Cup', '2024-04-01 18:42:37', '2024-04-01 18:42:37', 'product_images/product_1712022157_resized.webp', 'product_images/product_1712022157_show.webp', 'product_images/product_1712022157_thumbnail.webp'),
+(142, 91, 'product_images/product_1712022214_original.webp', 'Reggio Essential Oil Bottle', '2024-04-01 18:43:35', '2024-04-01 18:43:35', 'product_images/product_1712022214_resized.webp', 'product_images/product_1712022214_show.webp', 'product_images/product_1712022214_thumbnail.webp'),
+(143, 92, 'product_images/product_1712022249_original.webp', 'Maduray Essential Oil Bottle', '2024-04-01 18:44:09', '2024-04-01 18:44:09', 'product_images/product_1712022249_resized.webp', 'product_images/product_1712022249_show.webp', 'product_images/product_1712022249_thumbnail.webp'),
+(144, 93, 'product_images/product_1712022308_original.webp', 'La Recharge Essential Oil Bottle', '2024-04-01 18:45:08', '2024-04-01 18:45:08', 'product_images/product_1712022308_resized.webp', 'product_images/product_1712022308_show.webp', 'product_images/product_1712022308_thumbnail.webp'),
+(145, 94, 'product_images/product_1712022382_original.webp', 'Cire Trvdon Essential Oil Bottle', '2024-04-01 18:46:23', '2024-04-01 18:46:23', 'product_images/product_1712022382_resized.webp', 'product_images/product_1712022382_show.webp', 'product_images/product_1712022382_thumbnail.webp'),
+(146, 95, 'product_images/product_1712022414_original.webp', 'Essential Oil Bottle', '2024-04-01 18:46:55', '2024-04-01 18:46:55', 'product_images/product_1712022414_resized.webp', 'product_images/product_1712022414_show.webp', 'product_images/product_1712022414_thumbnail.webp'),
+(147, 96, 'product_images/product_1712022467_original.webp', 'Candle Holders', '2024-04-01 18:47:47', '2024-04-01 18:47:47', 'product_images/product_1712022467_resized.webp', 'product_images/product_1712022467_show.webp', 'product_images/product_1712022467_thumbnail.webp'),
+(148, 97, 'product_images/product_1712022545_original.webp', 'Classic Watch', '2024-04-01 18:49:06', '2024-04-01 18:49:06', 'product_images/product_1712022545_resized.webp', 'product_images/product_1712022545_show.webp', 'product_images/product_1712022545_thumbnail.webp'),
+(149, 98, 'product_images/product_1712022599_original.webp', 'Floral Pattern Plate 1', '2024-04-01 18:49:59', '2024-04-01 18:49:59', 'product_images/product_1712022599_resized.webp', 'product_images/product_1712022599_show.webp', 'product_images/product_1712022599_thumbnail.webp'),
+(150, 99, 'product_images/product_1712022634_original.webp', 'Floral Pattern Plate 2', '2024-04-01 18:50:34', '2024-04-01 18:50:34', 'product_images/product_1712022634_resized.webp', 'product_images/product_1712022634_show.webp', 'product_images/product_1712022634_thumbnail.webp'),
+(151, 100, 'product_images/product_1712022790_original.webp', 'Red Luxury Chopsticks', '2024-04-01 18:53:10', '2024-04-01 18:53:10', 'product_images/product_1712022790_resized.webp', 'product_images/product_1712022790_show.webp', 'product_images/product_1712022790_thumbnail.webp'),
+(152, 101, 'product_images/product_1712022807_original.webp', 'White Luxury Chopsticks', '2024-04-01 18:53:28', '2024-04-01 18:53:28', 'product_images/product_1712022807_resized.webp', 'product_images/product_1712022807_show.webp', 'product_images/product_1712022807_thumbnail.webp'),
+(153, 102, 'product_images/product_1712022892_original.webp', 'Luxury Ashtray', '2024-04-01 18:54:53', '2024-04-01 18:54:53', 'product_images/product_1712022892_resized.webp', 'product_images/product_1712022892_show.webp', 'product_images/product_1712022892_thumbnail.webp'),
+(154, 103, 'product_images/product_1712022933_original.webp', 'France Luxury Ashtray', '2024-04-01 18:55:33', '2024-04-01 18:55:33', 'product_images/product_1712022933_resized.webp', 'product_images/product_1712022933_show.webp', 'product_images/product_1712022933_thumbnail.webp'),
+(155, 104, 'product_images/product_1712022991_original.webp', 'Small Wooden Box', '2024-04-01 18:56:31', '2024-04-01 18:56:31', 'product_images/product_1712022991_resized.webp', 'product_images/product_1712022991_show.webp', 'product_images/product_1712022991_thumbnail.webp'),
+(156, 105, 'product_images/product_1712023048_original.webp', 'Mail Box', '2024-04-01 18:57:28', '2024-04-01 18:57:28', 'product_images/product_1712023048_resized.webp', 'product_images/product_1712023048_show.webp', 'product_images/product_1712023048_thumbnail.webp'),
+(157, 106, 'product_images/product_1712023089_original.webp', 'Green Tissue Box', '2024-04-01 18:58:09', '2024-04-01 18:58:09', 'product_images/product_1712023089_resized.webp', 'product_images/product_1712023089_show.webp', 'product_images/product_1712023089_thumbnail.webp'),
+(158, 107, 'product_images/product_1712023125_original.webp', 'Pink Tissue Box', '2024-04-01 18:58:46', '2024-04-01 18:58:46', 'product_images/product_1712023125_resized.webp', 'product_images/product_1712023125_show.webp', 'product_images/product_1712023125_thumbnail.webp'),
+(159, 108, 'product_images/product_1712023168_original.webp', 'Yellow Tissue Box', '2024-04-01 18:59:28', '2024-04-01 18:59:28', 'product_images/product_1712023168_resized.webp', 'product_images/product_1712023168_show.webp', 'product_images/product_1712023168_thumbnail.webp'),
+(160, 109, 'product_images/product_1712023187_original.webp', 'Tissue Box', '2024-04-01 18:59:47', '2024-04-01 18:59:47', 'product_images/product_1712023187_resized.webp', 'product_images/product_1712023187_show.webp', 'product_images/product_1712023187_thumbnail.webp'),
+(161, 110, 'product_images/product_1712023205_original.webp', 'Purple Tissue Box', '2024-04-01 19:00:05', '2024-04-01 19:00:05', 'product_images/product_1712023205_resized.webp', 'product_images/product_1712023205_show.webp', 'product_images/product_1712023205_thumbnail.webp'),
+(162, 111, 'product_images/product_1712023244_original.webp', 'Large Jewelry Box', '2024-04-01 19:00:44', '2024-04-01 19:00:44', 'product_images/product_1712023244_resized.webp', 'product_images/product_1712023244_show.webp', 'product_images/product_1712023244_thumbnail.webp'),
+(163, 112, 'product_images/product_1712023332_original.webp', 'Spice jars', '2024-04-01 19:02:12', '2024-04-01 19:02:12', 'product_images/product_1712023332_resized.webp', 'product_images/product_1712023332_show.webp', 'product_images/product_1712023332_thumbnail.webp'),
+(164, 113, 'product_images/product_1712023378_original.webp', 'Wooden Tray', '2024-04-01 19:02:59', '2024-04-01 19:02:59', 'product_images/product_1712023378_resized.webp', 'product_images/product_1712023378_show.webp', 'product_images/product_1712023378_thumbnail.webp'),
+(165, 114, 'product_images/product_1712023414_original.webp', 'Glass Tray', '2024-04-01 19:03:35', '2024-04-01 19:03:35', 'product_images/product_1712023414_resized.webp', 'product_images/product_1712023414_show.webp', 'product_images/product_1712023414_thumbnail.webp'),
+(166, 115, 'product_images/product_1712052147_original.webp', 'Black Large Wooden Tray', '2024-04-02 03:02:27', '2024-04-02 03:02:27', 'product_images/product_1712052147_resized.webp', 'product_images/product_1712052147_show.webp', 'product_images/product_1712052147_thumbnail.webp'),
+(167, 116, 'product_images/product_1712052178_original.webp', 'Brown Large Wooden Tray', '2024-04-02 03:02:58', '2024-04-02 03:02:58', 'product_images/product_1712052178_resized.webp', 'product_images/product_1712052178_show.webp', 'product_images/product_1712052178_thumbnail.webp'),
+(168, 117, 'product_images/product_1712052269_original.webp', 'Tray Toothbrush', '2024-04-02 03:04:29', '2024-04-02 03:04:29', 'product_images/product_1712052269_resized.webp', 'product_images/product_1712052269_show.webp', 'product_images/product_1712052269_thumbnail.webp'),
+(169, 118, 'product_images/product_1712052327_original.webp', 'Metal Food Tray', '2024-04-02 03:05:28', '2024-04-02 03:05:28', 'product_images/product_1712052327_resized.webp', 'product_images/product_1712052327_show.webp', 'product_images/product_1712052327_thumbnail.webp'),
+(170, 119, 'product_images/product_1712052360_original.webp', 'Paper Tray', '2024-04-02 03:06:00', '2024-04-02 03:06:00', 'product_images/product_1712052360_resized.webp', 'product_images/product_1712052360_show.webp', 'product_images/product_1712052360_thumbnail.webp'),
+(171, 120, 'product_images/product_1712052471_original.webp', 'Green Soap Tray', '2024-04-02 03:07:52', '2024-04-02 03:07:52', 'product_images/product_1712052471_resized.webp', 'product_images/product_1712052471_show.webp', 'product_images/product_1712052471_thumbnail.webp'),
+(172, 121, 'product_images/product_1712052490_original.webp', 'Pink Soap Tray', '2024-04-02 03:08:11', '2024-04-02 03:08:11', 'product_images/product_1712052490_resized.webp', 'product_images/product_1712052490_show.webp', 'product_images/product_1712052490_thumbnail.webp'),
+(173, 122, 'product_images/product_1712052573_original.webp', 'Wooden Photo Frame', '2024-04-02 03:09:34', '2024-04-02 03:09:34', 'product_images/product_1712052573_resized.webp', 'product_images/product_1712052573_show.webp', 'product_images/product_1712052573_thumbnail.webp'),
+(174, 123, 'product_images/product_1712052627_original.webp', 'Silver Necklaces and Earrings', '2024-04-02 03:10:28', '2024-04-02 03:10:28', 'product_images/product_1712052627_resized.webp', 'product_images/product_1712052627_show.webp', 'product_images/product_1712052627_thumbnail.webp'),
+(175, 124, 'product_images/product_1712052696_original.webp', 'Salt Shaker', '2024-04-02 03:11:37', '2024-04-02 03:11:37', 'product_images/product_1712052696_resized.webp', 'product_images/product_1712052696_show.webp', 'product_images/product_1712052696_thumbnail.webp'),
+(176, 125, 'product_images/product_1712052752_original.webp', 'Pink Crystal Cup', '2024-04-02 03:12:32', '2024-04-02 03:12:32', 'product_images/product_1712052752_resized.webp', 'product_images/product_1712052752_show.webp', 'product_images/product_1712052752_thumbnail.webp'),
+(177, 126, 'product_images/product_1712052776_original.webp', 'Blue Crystal Cup', '2024-04-02 03:12:56', '2024-04-02 03:12:56', 'product_images/product_1712052776_resized.webp', 'product_images/product_1712052776_show.webp', 'product_images/product_1712052776_thumbnail.webp'),
+(178, 127, 'product_images/product_1712052821_original.webp', 'Green Crystal Cup', '2024-04-02 03:13:42', '2024-04-02 03:13:42', 'product_images/product_1712052821_resized.webp', 'product_images/product_1712052821_show.webp', 'product_images/product_1712052821_thumbnail.webp'),
+(179, 128, 'product_images/product_1712052873_original.webp', 'Green Low Crystal Glass', '2024-04-02 03:14:34', '2024-04-02 03:14:34', 'product_images/product_1712052873_resized.webp', 'product_images/product_1712052873_show.webp', 'product_images/product_1712052873_thumbnail.webp'),
+(180, 129, 'product_images/product_1712052899_original.webp', 'Blue Low Crystal Glass', '2024-04-02 03:14:59', '2024-04-02 03:14:59', 'product_images/product_1712052899_resized.webp', 'product_images/product_1712052899_show.webp', 'product_images/product_1712052899_thumbnail.webp'),
+(181, 130, 'product_images/product_1712052961_original.webp', 'France Scented Candles', '2024-04-02 03:16:02', '2024-04-02 03:16:02', 'product_images/product_1712052961_resized.webp', 'product_images/product_1712052961_show.webp', 'product_images/product_1712052961_thumbnail.webp'),
+(182, 131, 'product_images/product_1712053004_original.webp', 'Italian Scented Candles', '2024-04-02 03:16:44', '2024-04-02 03:16:44', 'product_images/product_1712053004_resized.webp', 'product_images/product_1712053004_show.webp', 'product_images/product_1712053004_thumbnail.webp'),
+(183, 132, 'product_images/product_1712053116_original.webp', 'England Scented Candles', '2024-04-02 03:18:37', '2024-04-02 03:18:37', 'product_images/product_1712053116_resized.webp', 'product_images/product_1712053116_show.webp', 'product_images/product_1712053116_thumbnail.webp'),
+(184, 133, 'product_images/product_1712053148_original.webp', 'Pot', '2024-04-02 03:19:09', '2024-04-02 03:19:09', 'product_images/product_1712053148_resized.webp', 'product_images/product_1712053148_show.webp', 'product_images/product_1712053148_thumbnail.webp'),
+(185, 134, 'product_images/product_1712053203_original.webp', 'Blue Crystal Ring', '2024-04-02 03:20:03', '2024-04-02 03:20:03', 'product_images/product_1712053203_resized.webp', 'product_images/product_1712053203_show.webp', 'product_images/product_1712053203_thumbnail.webp'),
+(186, 135, 'product_images/product_1712053243_original.webp', 'Silver Rings And Bracelets', '2024-04-02 03:20:44', '2024-04-02 03:20:44', 'product_images/product_1712053243_resized.webp', 'product_images/product_1712053243_show.webp', 'product_images/product_1712053243_thumbnail.webp'),
+(187, 136, 'product_images/product_1712053316_original.webp', 'Hamper', '2024-04-02 03:21:57', '2024-04-02 03:21:57', 'product_images/product_1712053316_resized.webp', 'product_images/product_1712053316_show.webp', 'product_images/product_1712053316_thumbnail.webp'),
+(188, 137, 'product_images/product_1712053367_original.webp', 'Recycle Bin', '2024-04-02 03:22:48', '2024-04-02 03:22:48', 'product_images/product_1712053367_resized.webp', 'product_images/product_1712053367_show.webp', 'product_images/product_1712053367_thumbnail.webp'),
+(189, 138, 'product_images/product_1712053415_original.webp', 'Metal Seed Tray', '2024-04-02 03:23:36', '2024-04-02 03:23:36', 'product_images/product_1712053415_resized.webp', 'product_images/product_1712053415_show.webp', 'product_images/product_1712053415_thumbnail.webp'),
+(190, 139, 'product_images/product_1712053469_original.webp', 'Egg Tray', '2024-04-02 03:24:29', '2024-04-02 03:24:29', 'product_images/product_1712053469_resized.webp', 'product_images/product_1712053469_show.webp', 'product_images/product_1712053469_thumbnail.webp'),
+(191, 140, 'product_images/product_1712053522_original.webp', 'Decorative Statue', '2024-04-02 03:25:23', '2024-04-02 03:25:23', 'product_images/product_1712053522_resized.webp', 'product_images/product_1712053522_show.webp', 'product_images/product_1712053522_thumbnail.webp'),
+(192, 141, 'product_images/product_1712053541_original.webp', 'Decorative Statue', '2024-04-02 03:25:42', '2024-04-02 03:25:42', 'product_images/product_1712053541_resized.webp', 'product_images/product_1712053541_show.webp', 'product_images/product_1712053541_thumbnail.webp'),
+(193, 142, 'product_images/product_1712053556_original.webp', 'Decorative Statue', '2024-04-02 03:25:56', '2024-04-02 03:25:56', 'product_images/product_1712053556_resized.webp', 'product_images/product_1712053556_show.webp', 'product_images/product_1712053556_thumbnail.webp'),
+(194, 143, 'product_images/product_1712053573_original.webp', 'Decorative Statue', '2024-04-02 03:26:13', '2024-04-02 03:26:13', 'product_images/product_1712053573_resized.webp', 'product_images/product_1712053573_show.webp', 'product_images/product_1712053573_thumbnail.webp'),
+(195, 144, 'product_images/product_1712053597_original.webp', 'Decorative Statue', '2024-04-02 03:26:38', '2024-04-02 03:26:38', 'product_images/product_1712053597_resized.webp', 'product_images/product_1712053597_show.webp', 'product_images/product_1712053597_thumbnail.webp'),
+(196, 145, 'product_images/product_1712053615_original.webp', 'Decorative Statue', '2024-04-02 03:26:56', '2024-04-02 03:26:56', 'product_images/product_1712053615_resized.webp', 'product_images/product_1712053615_show.webp', 'product_images/product_1712053615_thumbnail.webp'),
+(198, 147, 'product_images/product_1712053648_original.webp', 'Decorative Statue', '2024-04-02 03:27:29', '2024-04-02 03:27:29', 'product_images/product_1712053648_resized.webp', 'product_images/product_1712053648_show.webp', 'product_images/product_1712053648_thumbnail.webp'),
+(199, 148, 'product_images/product_1712053697_original.webp', 'Crystal Decorative Statue', '2024-04-02 03:28:17', '2024-04-02 03:28:17', 'product_images/product_1712053697_resized.webp', 'product_images/product_1712053697_show.webp', 'product_images/product_1712053697_thumbnail.webp'),
+(200, 149, 'product_images/product_1712053717_original.webp', 'Crystak Decorative Statue', '2024-04-02 03:28:37', '2024-04-02 03:28:37', 'product_images/product_1712053717_resized.webp', 'product_images/product_1712053717_show.webp', 'product_images/product_1712053717_thumbnail.webp'),
+(201, 150, 'product_images/product_1712053832_original.webp', 'Metal Trash Can', '2024-04-02 03:30:32', '2024-04-02 03:30:32', 'product_images/product_1712053832_resized.webp', 'product_images/product_1712053832_show.webp', 'product_images/product_1712053832_thumbnail.webp'),
+(202, 151, 'product_images/product_1712067641_original.webp', 'Diamond Ring', '2024-04-02 07:20:43', '2024-04-02 07:20:43', 'product_images/product_1712067641_resized.webp', 'product_images/product_1712067641_show.webp', 'product_images/product_1712067641_thumbnail.webp');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reviews`
+-- Cấu trúc bảng cho bảng `reviews`
 --
 
 CREATE TABLE `reviews` (
@@ -287,7 +691,7 @@ CREATE TABLE `reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `reviews`
+-- Đang đổ dữ liệu cho bảng `reviews`
 --
 
 INSERT INTO `reviews` (`id`, `product_id`, `user_id`, `rating`, `review`, `created_at`, `updated_at`) VALUES
@@ -463,12 +867,13 @@ INSERT INTO `reviews` (`id`, `product_id`, `user_id`, `rating`, `review`, `creat
 (406, 20, 19, 5, 'This belt is exceptional. The attention to detail is evident.', '2023-12-04 21:14:31', '2023-12-04 21:14:31'),
 (407, 20, 20, 4, 'Durable and stylish, though it took some time to break in.', '2023-12-04 21:14:31', '2023-12-04 21:14:31'),
 (408, 20, 21, 1, 'Not very comfortable, and the color started fading quickly.', '2023-12-04 21:14:31', '2023-12-04 21:14:31'),
-(409, 17, 21, 5, 'Very Cool!', '2023-12-04 20:31:15', '2023-12-04 20:31:15');
+(409, 17, 21, 5, 'Very Cool!', '2023-12-04 20:31:15', '2023-12-04 20:31:15'),
+(411, 4, 40, 1, 'ngon', '2024-04-02 06:50:58', '2024-04-02 06:50:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shopping_carts`
+-- Cấu trúc bảng cho bảng `shopping_carts`
 --
 
 CREATE TABLE `shopping_carts` (
@@ -483,7 +888,7 @@ CREATE TABLE `shopping_carts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transactions`
+-- Cấu trúc bảng cho bảng `transactions`
 --
 
 CREATE TABLE `transactions` (
@@ -498,7 +903,7 @@ CREATE TABLE `transactions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `transactions`
+-- Đang đổ dữ liệu cho bảng `transactions`
 --
 
 INSERT INTO `transactions` (`id`, `buyer_id`, `product_id`, `quantity`, `total_price`, `status`, `created_at`, `updated_at`) VALUES
@@ -566,12 +971,207 @@ INSERT INTO `transactions` (`id`, `buyer_id`, `product_id`, `quantity`, `total_p
 (74, 1, 26, 1, 32.99, 'pending', '2023-12-01 16:50:03', '2023-12-01 16:50:03'),
 (75, 1, 27, 1, 60.00, 'pending', '2023-12-01 16:50:03', '2023-12-01 16:50:03'),
 (76, 1, 11, 1, 29.99, 'sent', '2023-12-01 20:04:03', '2023-12-02 17:47:09'),
-(77, 1, 20, 4, 143.96, 'pending', '2023-12-04 07:48:28', '2023-12-04 07:48:28');
+(77, 1, 20, 4, 143.96, 'pending', '2023-12-04 07:48:28', '2023-12-04 07:48:28'),
+(78, 40, 22, 1, 27.99, 'pending', '2024-03-14 17:34:26', '2024-03-14 17:34:26'),
+(79, 41, 4, 1, 60.99, 'pending', '2024-03-15 20:31:19', '2024-03-15 20:31:19'),
+(80, 45, 4, 1, 60.99, 'pending', '2024-03-18 16:59:25', '2024-03-18 16:59:25'),
+(81, 45, 46, 1, 30.00, 'sent', '2024-03-18 17:03:53', '2024-03-18 17:04:31'),
+(82, 40, 11, 1, 29.99, 'pending', '2024-03-31 06:31:47', '2024-03-31 06:31:47'),
+(83, 40, 4, 1, 60.99, 'pending', '2024-03-31 06:31:47', '2024-03-31 06:31:47'),
+(84, 50, 51, 1, 9.00, 'sent', '2024-04-01 07:03:58', '2024-04-01 07:04:36'),
+(85, 50, 49, 1, 12.00, 'sent', '2024-04-01 07:03:58', '2024-04-01 07:04:34'),
+(86, 40, 4, 1, 60.99, 'pending', '2024-04-02 06:58:29', '2024-04-02 06:58:29'),
+(87, 50, 57, 1, 25.00, 'pending', '2024-04-03 01:12:14', '2024-04-03 01:12:14'),
+(88, 50, 61, 1, 32.00, 'pending', '2024-04-03 01:12:14', '2024-04-03 01:12:14'),
+(89, 50, 49, 1, 12.00, 'pending', '2024-04-03 01:14:42', '2024-04-03 01:14:42'),
+(90, 50, 56, 1, 20.00, 'pending', '2024-04-03 01:14:42', '2024-04-03 01:14:42'),
+(91, 50, 53, 1, 12.00, 'pending', '2024-04-03 01:15:47', '2024-04-03 01:15:47'),
+(92, 50, 61, 1, 32.00, 'pending', '2024-04-03 01:15:47', '2024-04-03 01:15:47'),
+(93, 50, 50, 1, 10.00, 'pending', '2024-04-03 01:16:21', '2024-04-03 01:16:21'),
+(94, 50, 57, 1, 25.00, 'pending', '2024-04-03 01:16:21', '2024-04-03 01:16:21'),
+(95, 50, 62, 1, 18.00, 'pending', '2024-04-03 01:17:47', '2024-04-03 01:17:47'),
+(96, 50, 63, 1, 25.00, 'pending', '2024-04-03 01:17:47', '2024-04-03 01:17:47'),
+(97, 50, 65, 1, 17.00, 'pending', '2024-04-03 01:18:20', '2024-04-03 01:18:20'),
+(98, 50, 66, 1, 17.00, 'pending', '2024-04-03 01:18:20', '2024-04-03 01:18:20'),
+(99, 50, 68, 1, 12.00, 'pending', '2024-04-03 01:19:40', '2024-04-03 01:19:40'),
+(100, 50, 71, 1, 15.00, 'pending', '2024-04-03 01:19:40', '2024-04-03 01:19:40'),
+(101, 50, 84, 1, 170.00, 'pending', '2024-04-03 01:21:24', '2024-04-03 01:21:24'),
+(102, 50, 123, 1, 50.00, 'pending', '2024-04-03 01:21:24', '2024-04-03 01:21:24'),
+(103, 50, 91, 1, 25.00, 'pending', '2024-04-03 01:25:28', '2024-04-03 01:25:28'),
+(104, 50, 92, 1, 25.00, 'pending', '2024-04-03 01:25:28', '2024-04-03 01:25:28'),
+(105, 50, 47, 1, 16.00, 'pending', '2024-04-03 01:26:22', '2024-04-03 01:26:22'),
+(106, 50, 51, 1, 9.00, 'pending', '2024-04-03 01:26:22', '2024-04-03 01:26:22'),
+(107, 50, 69, 1, 18.00, 'pending', '2024-04-03 01:27:49', '2024-04-03 01:27:49'),
+(108, 50, 103, 1, 18.00, 'pending', '2024-04-03 01:27:49', '2024-04-03 01:27:49'),
+(109, 50, 73, 1, 21.00, 'pending', '2024-04-03 01:29:00', '2024-04-03 01:29:00'),
+(110, 50, 115, 1, 20.00, 'pending', '2024-04-03 01:29:00', '2024-04-03 01:29:00'),
+(111, 50, 142, 1, 25.00, 'pending', '2024-04-03 01:30:31', '2024-04-03 01:30:31'),
+(112, 50, 141, 1, 25.00, 'pending', '2024-04-03 01:30:31', '2024-04-03 01:30:31'),
+(113, 50, 109, 1, 14.00, 'pending', '2024-04-03 01:32:16', '2024-04-03 01:32:16'),
+(114, 50, 110, 1, 14.00, 'pending', '2024-04-03 01:32:16', '2024-04-03 01:32:16'),
+(115, 50, 70, 1, 11.00, 'pending', '2024-04-03 01:33:07', '2024-04-03 01:33:07'),
+(116, 50, 74, 1, 19.00, 'pending', '2024-04-03 01:33:07', '2024-04-03 01:33:07'),
+(117, 50, 150, 1, 18.00, 'pending', '2024-04-03 01:34:52', '2024-04-03 01:34:52'),
+(118, 50, 148, 1, 30.00, 'pending', '2024-04-03 01:34:52', '2024-04-03 01:34:52'),
+(119, 50, 87, 1, 8.00, 'pending', '2024-04-03 01:35:51', '2024-04-03 01:35:51'),
+(120, 50, 88, 1, 7.00, 'pending', '2024-04-03 01:35:51', '2024-04-03 01:35:51'),
+(121, 50, 97, 1, 25.00, 'pending', '2024-04-03 01:37:16', '2024-04-03 01:37:16'),
+(122, 50, 104, 1, 12.00, 'pending', '2024-04-03 01:37:16', '2024-04-03 01:37:16'),
+(123, 50, 110, 1, 14.00, 'pending', '2024-04-03 01:38:29', '2024-04-03 01:38:29'),
+(124, 50, 117, 1, 18.00, 'pending', '2024-04-03 01:38:29', '2024-04-03 01:38:29'),
+(125, 50, 151, 1, 500.00, 'pending', '2024-04-03 01:40:00', '2024-04-03 01:40:00'),
+(126, 50, 135, 1, 33.00, 'pending', '2024-04-03 01:40:00', '2024-04-03 01:40:00'),
+(127, 50, 120, 1, 15.00, 'pending', '2024-04-03 01:43:38', '2024-04-03 01:43:38'),
+(128, 50, 122, 1, 8.00, 'pending', '2024-04-03 01:43:38', '2024-04-03 01:43:38'),
+(129, 50, 116, 1, 20.00, 'pending', '2024-04-03 01:44:15', '2024-04-03 01:44:15'),
+(130, 50, 124, 1, 18.00, 'pending', '2024-04-03 01:44:15', '2024-04-03 01:44:15'),
+(131, 50, 144, 1, 25.00, 'pending', '2024-04-03 01:45:24', '2024-04-03 01:45:24'),
+(132, 50, 145, 1, 25.00, 'pending', '2024-04-03 01:45:24', '2024-04-03 01:45:24'),
+(133, 50, 131, 1, 22.00, 'pending', '2024-04-03 01:46:07', '2024-04-03 01:46:07'),
+(134, 50, 130, 1, 19.00, 'pending', '2024-04-03 01:46:07', '2024-04-03 01:46:07'),
+(135, 50, 95, 1, 22.00, 'pending', '2024-04-03 01:48:29', '2024-04-03 01:48:29'),
+(136, 50, 96, 1, 15.00, 'pending', '2024-04-03 01:48:30', '2024-04-03 01:48:30'),
+(137, 50, 83, 1, 5.00, 'pending', '2024-04-03 01:49:28', '2024-04-03 01:49:28'),
+(138, 50, 118, 1, 27.00, 'pending', '2024-04-03 01:49:28', '2024-04-03 01:49:28'),
+(139, 50, 117, 1, 18.00, 'pending', '2024-04-03 01:50:41', '2024-04-03 01:50:41'),
+(140, 50, 128, 1, 16.00, 'pending', '2024-04-03 01:50:41', '2024-04-03 01:50:41'),
+(141, 50, 98, 1, 8.00, 'pending', '2024-04-03 01:52:09', '2024-04-03 01:52:09'),
+(142, 50, 99, 1, 7.00, 'pending', '2024-04-03 01:52:09', '2024-04-03 01:52:09'),
+(143, 50, 74, 1, 19.00, 'pending', '2024-04-03 01:53:20', '2024-04-03 01:53:20'),
+(144, 50, 76, 1, 11.00, 'pending', '2024-04-03 01:53:20', '2024-04-03 01:53:20'),
+(145, 50, 75, 1, 13.00, 'pending', '2024-04-03 01:55:05', '2024-04-03 01:55:05'),
+(146, 50, 77, 1, 15.00, 'pending', '2024-04-03 01:55:05', '2024-04-03 01:55:05'),
+(147, 50, 78, 1, 19.00, 'pending', '2024-04-03 01:56:12', '2024-04-03 01:56:12'),
+(148, 50, 79, 1, 19.00, 'pending', '2024-04-03 01:56:12', '2024-04-03 01:56:12'),
+(149, 50, 123, 1, 50.00, 'pending', '2024-04-03 01:57:19', '2024-04-03 01:57:19'),
+(150, 50, 134, 1, 30.00, 'pending', '2024-04-03 01:57:19', '2024-04-03 01:57:19'),
+(151, 50, 149, 1, 30.00, 'pending', '2024-04-03 01:58:40', '2024-04-03 01:58:40'),
+(152, 50, 148, 1, 30.00, 'pending', '2024-04-03 01:58:40', '2024-04-03 01:58:40'),
+(153, 50, 52, 1, 15.00, 'pending', '2024-04-03 19:46:45', '2024-04-03 19:46:45'),
+(154, 50, 82, 1, 20.00, 'pending', '2024-04-03 19:46:45', '2024-04-03 19:46:45'),
+(155, 50, 47, 1, 16.00, 'pending', '2024-04-03 19:48:07', '2024-04-03 19:48:07'),
+(156, 50, 49, 1, 12.00, 'pending', '2024-04-03 19:48:07', '2024-04-03 19:48:07'),
+(157, 50, 53, 1, 12.00, 'pending', '2024-04-03 19:48:53', '2024-04-03 19:48:53'),
+(158, 50, 51, 1, 9.00, 'pending', '2024-04-03 19:49:36', '2024-04-03 19:49:36'),
+(159, 50, 54, 1, 13.00, 'pending', '2024-04-03 19:51:09', '2024-04-03 19:51:09'),
+(160, 50, 65, 1, 17.00, 'pending', '2024-04-03 19:51:09', '2024-04-03 19:51:09'),
+(161, 50, 59, 1, 19.00, 'pending', '2024-04-03 19:51:59', '2024-04-03 19:51:59'),
+(162, 50, 73, 1, 21.00, 'pending', '2024-04-03 19:51:59', '2024-04-03 19:51:59'),
+(163, 50, 74, 1, 19.00, 'pending', '2024-04-03 19:53:07', '2024-04-03 19:53:07'),
+(164, 50, 97, 1, 25.00, 'pending', '2024-04-03 19:53:07', '2024-04-03 19:53:07'),
+(165, 50, 68, 1, 12.00, 'pending', '2024-04-03 19:54:26', '2024-04-03 19:54:26'),
+(166, 50, 84, 1, 170.00, 'pending', '2024-04-03 19:54:26', '2024-04-03 19:54:26'),
+(167, 50, 101, 1, 12.00, 'pending', '2024-04-03 19:55:07', '2024-04-03 19:55:07'),
+(168, 50, 61, 1, 32.00, 'pending', '2024-04-03 19:56:06', '2024-04-03 19:56:06'),
+(169, 50, 69, 1, 18.00, 'pending', '2024-04-03 19:57:16', '2024-04-03 19:57:16'),
+(170, 50, 61, 1, 32.00, 'pending', '2024-04-03 19:57:16', '2024-04-03 19:57:16'),
+(171, 50, 110, 1, 14.00, 'pending', '2024-04-03 19:58:08', '2024-04-03 19:58:08'),
+(172, 50, 78, 1, 19.00, 'pending', '2024-04-03 20:49:09', '2024-04-03 20:49:09'),
+(173, 50, 56, 1, 20.00, 'pending', '2024-04-03 20:50:10', '2024-04-03 20:50:10'),
+(174, 50, 74, 1, 19.00, 'pending', '2024-04-03 20:50:10', '2024-04-03 20:50:10'),
+(175, 50, 97, 1, 25.00, 'pending', '2024-04-03 20:52:11', '2024-04-03 20:52:11'),
+(176, 50, 132, 1, 20.00, 'pending', '2024-04-03 20:52:11', '2024-04-03 20:52:11'),
+(177, 50, 123, 1, 50.00, 'pending', '2024-04-03 20:52:11', '2024-04-03 20:52:11'),
+(178, 50, 151, 1, 500.00, 'pending', '2024-04-03 20:53:07', '2024-04-03 20:53:07'),
+(179, 50, 123, 1, 50.00, 'pending', '2024-04-03 20:53:07', '2024-04-03 20:53:07'),
+(180, 50, 135, 1, 33.00, 'pending', '2024-04-03 20:53:07', '2024-04-03 20:53:07'),
+(181, 50, 144, 1, 25.00, 'pending', '2024-04-03 20:53:49', '2024-04-03 20:53:49'),
+(182, 50, 134, 1, 30.00, 'pending', '2024-04-03 20:54:27', '2024-04-03 20:54:27'),
+(183, 50, 75, 1, 13.00, 'pending', '2024-04-04 17:19:25', '2024-04-04 17:19:25'),
+(184, 50, 109, 1, 14.00, 'pending', '2024-04-04 17:19:25', '2024-04-04 17:19:25'),
+(185, 50, 90, 1, 7.00, 'pending', '2024-04-04 17:19:25', '2024-04-04 17:19:25'),
+(186, 50, 61, 1, 32.00, 'pending', '2024-04-04 17:21:15', '2024-04-04 17:21:15'),
+(187, 50, 83, 1, 5.00, 'pending', '2024-04-04 17:21:15', '2024-04-04 17:21:15'),
+(188, 50, 94, 1, 30.00, 'pending', '2024-04-04 17:21:15', '2024-04-04 17:21:15'),
+(189, 50, 59, 1, 19.00, 'pending', '2024-04-04 17:22:54', '2024-04-04 17:22:54'),
+(190, 50, 122, 1, 8.00, 'pending', '2024-04-04 17:22:54', '2024-04-04 17:22:54'),
+(191, 50, 129, 1, 16.00, 'pending', '2024-04-04 17:24:03', '2024-04-04 17:24:03'),
+(192, 50, 126, 1, 17.00, 'pending', '2024-04-04 17:24:03', '2024-04-04 17:24:03'),
+(193, 50, 99, 1, 7.00, 'pending', '2024-04-04 17:25:23', '2024-04-04 17:25:23'),
+(194, 50, 124, 1, 18.00, 'pending', '2024-04-04 17:25:23', '2024-04-04 17:25:23'),
+(195, 50, 133, 1, 19.00, 'pending', '2024-04-04 17:27:42', '2024-04-04 17:27:42'),
+(196, 50, 139, 1, 22.00, 'pending', '2024-04-04 17:27:42', '2024-04-04 17:27:42'),
+(197, 50, 106, 1, 14.00, 'pending', '2024-04-04 17:28:20', '2024-04-04 17:28:20'),
+(198, 50, 115, 1, 20.00, 'pending', '2024-04-04 17:29:23', '2024-04-04 17:29:23'),
+(199, 50, 119, 1, 14.00, 'pending', '2024-04-04 17:29:23', '2024-04-04 17:29:23'),
+(200, 50, 144, 1, 25.00, 'pending', '2024-04-04 17:30:25', '2024-04-04 17:30:25'),
+(201, 50, 147, 1, 25.00, 'pending', '2024-04-04 17:30:25', '2024-04-04 17:30:25'),
+(202, 50, 59, 2, 38.00, 'pending', '2024-04-04 17:35:18', '2024-04-04 17:35:18'),
+(203, 50, 70, 1, 11.00, 'pending', '2024-04-04 17:37:24', '2024-04-04 17:37:24'),
+(204, 50, 78, 1, 19.00, 'pending', '2024-04-04 17:37:24', '2024-04-04 17:37:24'),
+(205, 50, 63, 1, 25.00, 'pending', '2024-04-04 17:38:31', '2024-04-04 17:38:31'),
+(206, 50, 62, 1, 18.00, 'pending', '2024-04-04 17:38:31', '2024-04-04 17:38:31'),
+(207, 50, 56, 1, 20.00, 'pending', '2024-04-04 17:39:18', '2024-04-04 17:39:18'),
+(208, 50, 57, 1, 25.00, 'pending', '2024-04-04 17:39:18', '2024-04-04 17:39:18'),
+(209, 50, 52, 1, 15.00, 'pending', '2024-04-04 17:40:09', '2024-04-04 17:40:09'),
+(210, 50, 51, 1, 9.00, 'pending', '2024-04-04 17:40:09', '2024-04-04 17:40:09'),
+(211, 50, 75, 1, 13.00, 'pending', '2024-04-04 17:43:06', '2024-04-04 17:43:06'),
+(212, 50, 76, 1, 11.00, 'pending', '2024-04-04 17:43:06', '2024-04-04 17:43:06'),
+(213, 50, 151, 1, 500.00, 'pending', '2024-04-04 17:46:00', '2024-04-04 17:46:00'),
+(214, 50, 135, 1, 33.00, 'pending', '2024-04-04 17:46:00', '2024-04-04 17:46:00'),
+(215, 50, 49, 1, 12.00, 'pending', '2024-04-04 17:46:31', '2024-04-04 17:46:31'),
+(216, 50, 50, 1, 10.00, 'pending', '2024-04-04 17:46:31', '2024-04-04 17:46:31'),
+(217, 50, 53, 1, 12.00, 'pending', '2024-04-04 17:47:09', '2024-04-04 17:47:09'),
+(218, 50, 54, 1, 13.00, 'pending', '2024-04-04 17:47:09', '2024-04-04 17:47:09'),
+(219, 50, 51, 1, 9.00, 'pending', '2024-04-04 17:47:45', '2024-04-04 17:47:45'),
+(220, 50, 68, 1, 12.00, 'pending', '2024-04-04 17:47:45', '2024-04-04 17:47:45'),
+(221, 50, 61, 1, 32.00, 'pending', '2024-04-04 17:48:39', '2024-04-04 17:48:39'),
+(222, 50, 64, 1, 22.00, 'pending', '2024-04-04 17:48:39', '2024-04-04 17:48:39'),
+(223, 50, 71, 1, 15.00, 'pending', '2024-04-04 17:49:21', '2024-04-04 17:49:21'),
+(224, 50, 72, 1, 17.00, 'pending', '2024-04-04 17:49:21', '2024-04-04 17:49:21'),
+(225, 50, 65, 1, 17.00, 'pending', '2024-04-04 17:49:56', '2024-04-04 17:49:56'),
+(226, 50, 66, 1, 17.00, 'pending', '2024-04-04 17:49:56', '2024-04-04 17:49:56'),
+(227, 50, 74, 1, 19.00, 'pending', '2024-04-04 17:50:30', '2024-04-04 17:50:30'),
+(228, 50, 83, 1, 5.00, 'pending', '2024-04-04 17:50:31', '2024-04-04 17:50:31'),
+(229, 50, 77, 1, 15.00, 'pending', '2024-04-04 17:52:02', '2024-04-04 17:52:02'),
+(230, 50, 81, 1, 22.00, 'pending', '2024-04-04 17:52:02', '2024-04-04 17:52:02'),
+(231, 50, 85, 1, 15.00, 'pending', '2024-04-04 17:53:00', '2024-04-04 17:53:00'),
+(232, 50, 84, 1, 170.00, 'pending', '2024-04-04 17:53:00', '2024-04-04 17:53:00'),
+(233, 50, 76, 1, 11.00, 'pending', '2024-04-04 17:54:59', '2024-04-04 17:54:59'),
+(234, 50, 79, 1, 19.00, 'pending', '2024-04-04 17:54:59', '2024-04-04 17:54:59'),
+(235, 50, 110, 1, 14.00, 'pending', '2024-04-04 17:56:10', '2024-04-04 17:56:10'),
+(236, 50, 109, 1, 14.00, 'pending', '2024-04-04 17:56:10', '2024-04-04 17:56:10'),
+(237, 50, 82, 1, 20.00, 'pending', '2024-04-04 17:57:25', '2024-04-04 17:57:25'),
+(238, 50, 85, 1, 15.00, 'pending', '2024-04-04 17:57:25', '2024-04-04 17:57:25'),
+(239, 50, 68, 1, 12.00, 'pending', '2024-04-04 17:58:12', '2024-04-04 17:58:12'),
+(240, 50, 74, 1, 19.00, 'pending', '2024-04-04 17:58:12', '2024-04-04 17:58:12'),
+(241, 50, 53, 1, 12.00, 'pending', '2024-04-04 17:59:02', '2024-04-04 17:59:02'),
+(242, 50, 52, 1, 15.00, 'pending', '2024-04-04 17:59:02', '2024-04-04 17:59:02'),
+(243, 50, 49, 1, 12.00, 'pending', '2024-04-04 17:59:38', '2024-04-04 17:59:38'),
+(244, 50, 50, 1, 10.00, 'pending', '2024-04-04 17:59:38', '2024-04-04 17:59:38'),
+(245, 50, 59, 1, 19.00, 'pending', '2024-04-04 18:00:42', '2024-04-04 18:00:42'),
+(246, 50, 61, 1, 32.00, 'pending', '2024-04-04 18:00:42', '2024-04-04 18:00:42'),
+(247, 50, 61, 1, 32.00, 'pending', '2024-04-04 18:02:25', '2024-04-04 18:02:25'),
+(248, 50, 64, 1, 22.00, 'pending', '2024-04-04 18:02:25', '2024-04-04 18:02:25'),
+(249, 50, 73, 1, 21.00, 'pending', '2024-04-04 18:03:12', '2024-04-04 18:03:12'),
+(250, 50, 80, 1, 18.00, 'pending', '2024-04-04 18:03:12', '2024-04-04 18:03:12'),
+(251, 50, 105, 1, 10.00, 'pending', '2024-04-04 18:03:40', '2024-04-04 18:03:40'),
+(252, 50, 112, 1, 9.00, 'pending', '2024-04-04 18:03:40', '2024-04-04 18:03:40'),
+(253, 50, 77, 1, 15.00, 'pending', '2024-04-04 18:04:51', '2024-04-04 18:04:51'),
+(254, 50, 78, 1, 19.00, 'pending', '2024-04-04 18:04:51', '2024-04-04 18:04:51'),
+(255, 50, 55, 1, 10.00, 'pending', '2024-04-04 18:05:58', '2024-04-04 18:05:58'),
+(256, 50, 56, 1, 20.00, 'pending', '2024-04-04 18:05:58', '2024-04-04 18:05:58'),
+(257, 50, 61, 1, 32.00, 'pending', '2024-04-04 18:06:50', '2024-04-04 18:06:50'),
+(258, 50, 63, 1, 25.00, 'pending', '2024-04-04 18:06:50', '2024-04-04 18:06:50'),
+(259, 50, 73, 1, 21.00, 'pending', '2024-04-04 18:07:42', '2024-04-04 18:07:42'),
+(260, 50, 75, 1, 13.00, 'pending', '2024-04-04 18:07:42', '2024-04-04 18:07:42'),
+(261, 50, 57, 1, 25.00, 'pending', '2024-04-04 18:08:13', '2024-04-04 18:08:13'),
+(262, 50, 61, 1, 32.00, 'pending', '2024-04-04 18:08:13', '2024-04-04 18:08:13'),
+(263, 50, 61, 1, 32.00, 'pending', '2024-04-04 18:08:59', '2024-04-04 18:08:59'),
+(264, 50, 68, 1, 12.00, 'pending', '2024-04-04 18:08:59', '2024-04-04 18:08:59'),
+(265, 50, 76, 1, 11.00, 'pending', '2024-04-04 18:09:33', '2024-04-04 18:09:33'),
+(266, 50, 78, 1, 19.00, 'pending', '2024-04-04 18:09:33', '2024-04-04 18:09:33'),
+(267, 50, 86, 1, 8.00, 'pending', '2024-04-04 18:10:07', '2024-04-04 18:10:07'),
+(268, 50, 88, 1, 7.00, 'pending', '2024-04-04 18:10:07', '2024-04-04 18:10:07'),
+(269, 50, 103, 1, 18.00, 'pending', '2024-04-04 18:10:40', '2024-04-04 18:10:40'),
+(270, 50, 56, 1, 20.00, 'pending', '2024-04-04 18:10:40', '2024-04-04 18:10:40'),
+(271, 50, 97, 1, 25.00, 'pending', '2024-04-04 18:11:19', '2024-04-04 18:11:19'),
+(272, 50, 102, 1, 14.00, 'pending', '2024-04-04 18:11:19', '2024-04-04 18:11:19');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -587,7 +1187,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `isArtisan`) VALUES
@@ -615,12 +1215,17 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (30, 'Sophia Jackson', 'sophia.jackson@example.com', NULL, '$2y$12$6fntDq24ad4dqVLH1Yv2v.tu6Ad34fYra0R/jGagr6yPF1OKUvic.', NULL, '2023-11-12 09:35:35', '2023-11-12 09:35:35', 0),
 (31, 'Tyler Martin', 'tyler.martin@example.com', NULL, '$2y$12$ayy0qBTOtfn5b.kpeEZvT.rm73nHdPns1Kk2z7nAUmuuGQJ8o5.Ou', NULL, '2023-11-12 09:35:35', '2023-11-12 09:35:35', 0),
 (32, 'Emily Thornton', 'emily.thornton@example.com', NULL, '$2y$12$UttJkr6bniMZTVXGZxBiJuBDsskrf5w5vBznRSL2VL.ytYWVHkonS', NULL, '2023-11-23 16:21:19', '2023-11-23 16:21:19', 0),
-(33, 'Bob Dome', 'bob.dome@example.com', NULL, '$2y$12$Q50w3LuqzZU17I7lRMKV5eM385le4rj1ZvzM7H4kcWWo09z2qcGm6', NULL, '2023-11-29 13:27:43', '2023-11-29 13:27:43', 0);
+(33, 'Bob Dome', 'bob.dome@example.com', NULL, '$2y$12$Q50w3LuqzZU17I7lRMKV5eM385le4rj1ZvzM7H4kcWWo09z2qcGm6', NULL, '2023-11-29 13:27:43', '2023-11-29 13:27:43', 0),
+(40, 'Khang Torres', 'phanvinhkhang987@gmail.com', '2024-03-14 17:16:24', '$2y$12$tTg9ilxXQ2y.FLNL4RL6V.SFMXtOM6bZ5e5exAs2QemwYlMmrQ9Hy', 'UmxPY43Yf80NbWlgbrf9Knhz22It1h6fl5qRHLcKlRCa4OzKDoOq9KNwzIjU', '2024-03-14 17:14:53', '2024-03-31 06:22:26', 1),
+(42, 'Fernando Torres', 'khangkhung080502@gmail.com', NULL, '$2y$12$UzFoYFeAnGyNGWcN9oE8EOxfjE0i9/ibxtyt.h76Xrvb7MhFaKjMC', NULL, '2024-03-17 23:07:01', '2024-03-17 23:07:01', 0),
+(43, 'mckhhang', 'mckhang0805@gmail.com', NULL, '$2y$12$/4h56cqZGlPhlIm6ZIN3nOoXXUhjaTxm/fbd4m8O1cP54g8Rnei/K', NULL, '2024-03-18 03:57:58', '2024-03-18 03:57:58', 0),
+(44, 'msuykhang', 'khangkhongwibu0805@gmail.com', NULL, '$2y$12$xDEqQ3sVwGodymed1yPVqO8THkJBDlqeDeWeGkVCtxIUqJJVBgzd2', NULL, '2024-03-18 04:03:31', '2024-03-18 04:03:31', 0),
+(50, 'Phan Vĩnh Khang', 'phanvinhkhang0805@gmail.com', '2024-03-18 18:55:40', '$2y$12$L3fqoSbNO4ZW8y6SOoZYH.G194Vj5BdW.SYSdNmBg7pGRi2bj9d.S', NULL, '2024-03-18 18:51:40', '2024-03-18 18:55:40', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_profiles`
+-- Cấu trúc bảng cho bảng `user_profiles`
 --
 
 CREATE TABLE `user_profiles` (
@@ -633,7 +1238,7 @@ CREATE TABLE `user_profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user_profiles`
+-- Đang đổ dữ liệu cho bảng `user_profiles`
 --
 
 INSERT INTO `user_profiles` (`id`, `user_id`, `bio`, `profile_picture`, `created_at`, `updated_at`) VALUES
@@ -661,47 +1266,52 @@ INSERT INTO `user_profiles` (`id`, `user_id`, `bio`, `profile_picture`, `created
 (22, 29, NULL, NULL, '2023-11-29 17:43:19', '2023-11-29 17:43:19'),
 (23, 30, NULL, NULL, '2023-11-29 17:43:19', '2023-11-29 17:43:19'),
 (24, 31, NULL, NULL, '2023-11-29 17:43:19', '2023-11-29 17:43:19'),
-(25, 32, NULL, NULL, '2023-11-29 17:43:19', '2023-11-29 17:43:19');
+(25, 32, NULL, NULL, '2023-11-29 17:43:19', '2023-11-29 17:43:19'),
+(30, 40, NULL, 'profile_pictures/profile_1710461829.webp', '2024-03-14 17:14:53', '2024-03-14 17:17:10'),
+(32, 42, NULL, 'profile_pictures/profile_1710742047.webp', '2024-03-17 23:07:01', '2024-03-17 23:07:28'),
+(33, 43, NULL, NULL, '2024-03-18 03:57:58', '2024-03-18 03:57:58'),
+(34, 44, NULL, NULL, '2024-03-18 04:03:31', '2024-03-18 04:03:31'),
+(40, 50, NULL, NULL, '2024-03-18 18:51:40', '2024-03-18 18:51:40');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `buyers`
+-- Chỉ mục cho bảng `buyers`
 --
 ALTER TABLE `buyers`
   ADD PRIMARY KEY (`id`),
   ADD KEY `buyers_transaction_fk` (`transaction_id`);
 
 --
--- Indexes for table `categories`
+-- Chỉ mục cho bảng `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `failed_jobs`
+-- Chỉ mục cho bảng `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indexes for table `migrations`
+-- Chỉ mục cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_reset_tokens`
+-- Chỉ mục cho bảng `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Chỉ mục cho bảng `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -709,7 +1319,7 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -717,14 +1327,14 @@ ALTER TABLE `products`
   ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `product_images`
+-- Chỉ mục cho bảng `product_images`
 --
 ALTER TABLE `product_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `reviews`
+-- Chỉ mục cho bảng `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`),
@@ -732,7 +1342,7 @@ ALTER TABLE `reviews`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `shopping_carts`
+-- Chỉ mục cho bảng `shopping_carts`
 --
 ALTER TABLE `shopping_carts`
   ADD PRIMARY KEY (`id`),
@@ -740,7 +1350,7 @@ ALTER TABLE `shopping_carts`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `transactions`
+-- Chỉ mục cho bảng `transactions`
 --
 ALTER TABLE `transactions`
   ADD PRIMARY KEY (`id`),
@@ -748,140 +1358,140 @@ ALTER TABLE `transactions`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `user_profiles`
+-- Chỉ mục cho bảng `user_profiles`
 --
 ALTER TABLE `user_profiles`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `buyers`
+-- AUTO_INCREMENT cho bảng `buyers`
 --
 ALTER TABLE `buyers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT cho bảng `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT cho bảng `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
--- AUTO_INCREMENT for table `product_images`
+-- AUTO_INCREMENT cho bảng `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
--- AUTO_INCREMENT for table `reviews`
+-- AUTO_INCREMENT cho bảng `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=412;
 
 --
--- AUTO_INCREMENT for table `shopping_carts`
+-- AUTO_INCREMENT cho bảng `shopping_carts`
 --
 ALTER TABLE `shopping_carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=332;
 
 --
--- AUTO_INCREMENT for table `transactions`
+-- AUTO_INCREMENT cho bảng `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=273;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `user_profiles`
+-- AUTO_INCREMENT cho bảng `user_profiles`
 --
 ALTER TABLE `user_profiles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `buyers`
+-- Các ràng buộc cho bảng `buyers`
 --
 ALTER TABLE `buyers`
   ADD CONSTRAINT `buyers_transaction_fk` FOREIGN KEY (`transaction_id`) REFERENCES `transactions` (`id`);
 
 --
--- Constraints for table `products`
+-- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`artisan_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
 
 --
--- Constraints for table `product_images`
+-- Các ràng buộc cho bảng `product_images`
 --
 ALTER TABLE `product_images`
   ADD CONSTRAINT `product_images_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `reviews`
+-- Các ràng buộc cho bảng `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `shopping_carts`
+-- Các ràng buộc cho bảng `shopping_carts`
 --
 ALTER TABLE `shopping_carts`
   ADD CONSTRAINT `shopping_carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `shopping_carts_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `transactions`
+-- Các ràng buộc cho bảng `transactions`
 --
 ALTER TABLE `transactions`
   ADD CONSTRAINT `transactions_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
--- Constraints for table `user_profiles`
+-- Các ràng buộc cho bảng `user_profiles`
 --
 ALTER TABLE `user_profiles`
   ADD CONSTRAINT `user_profiles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
