@@ -1,37 +1,39 @@
 <x-app-layout>
     <!-- Thêm vào phần hiển thị Dashboard -->
-<div class="mt-8">
-    <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
-        <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
-            <h2 class="text-lg font-bold tracking-tight text-text sm:text-3xl font-heading">Order Statistics</h2>
-            <div class="mt-2">
-                <p class="text-sm-1xl text-gray-500">Total Orders: {{ count($transactions) }}</p>
-                <p class="text-sm-1xl text-gray-500">Total Revenue: 
-                    {{
-                        number_format(collect($transactions)->sum(function($group) {
-                            return $group->sum('total_price');
-                        }), 2)
-                    }} €
-                </p>
+    <div class="mt-8">
+        <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
+            <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
+                <h2 class="text-lg font-bold tracking-tight text-text sm:text-3xl font-heading">Order Statistics</h2>
+                <div class="mt-2">
+                    <p class="text-sm-1xl text-gray-500">Total Orders: {{ count($transactions) }}</p>
+                    <p class="text-sm-1xl text-gray-500">Total Revenue: 
+                        {{
+                            number_format(collect($transactions)->sum(function($group) {
+                                return $group->sum('total_price');
+                            }), 2)
+                        }} €
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Phần Dashboard -->
     <section x-data="dashboard()">
         <div class="py-16 sm:py-24">
             <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
                 <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
-                    <h1 class="text-2xl font-bold tracking-tight text-text sm:text-3xl font-heading">Your Dashboard
-                    </h1>
+                    <h1 class="text-2xl font-bold tracking-tight text-text sm:text-3xl font-heading">Your Dashboard</h1>
                     <p class="mt-2 text-sm text-gray-500">Manage the status of recent orders.</p>
                 </div>
             </div>
 
+            <!-- Phần hiển thị đơn hàng -->
             <div class="mt-16">
                 <h2 class="sr-only">Recent orders</h2>
                 <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
                     <div class="mx-auto max-w-2xl space-y-8 sm:px-4 lg:max-w-4xl lg:px-0">
+                        <!-- Code hiển thị đơn hàng -->
                         @foreach ($transactions as $timestamp => $group)
                             @php
                                 $date = new \DateTime($timestamp);
@@ -157,6 +159,46 @@
             </div>
         </div>
     </section>
+
+    <!-- Phần biểu đồ -->
+    <div class="py-16 sm:py-24">
+        <div class="mx-auto max-w-7xl sm:px-2 lg:px-8">
+            <div class="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
+                <canvas id="orderChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const transactions = @json($transactions);
+            const dates = Object.keys(transactions).map(timestamp => new Date(timestamp));
+            const orders = dates.map(date => transactions[date.toISOString()].length);
+
+            const ctx = document.getElementById('orderChart').getContext('2d');
+            const orderChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dates.map(date => date.toLocaleDateString()),
+                    datasets: [{
+                        label: 'Number of Orders',
+                        data: orders,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
     <script>
         function dashboard() {

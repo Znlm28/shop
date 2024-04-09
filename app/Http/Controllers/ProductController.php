@@ -61,7 +61,10 @@ class ProductController extends Controller
         $products = $this->productQueryService->applyCategoryFilter($products, $selectedCategories);
         $products = $this->productQueryService->applySorting($products, $sort);
 
-        return view("products.index", ['products' => $products->get()]);
+        // Sử dụng phân trang
+    $products = $products->paginate(15); // Số lượng sản phẩm trên mỗi trang
+
+    return view("products.index", ['products' => $products]);
     }
 
     /**

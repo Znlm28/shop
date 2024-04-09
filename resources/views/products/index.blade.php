@@ -11,6 +11,12 @@
             </form>
             <!-- Product Grid Section -->
             <x-product-grid :products="$products" />
+
+            <!-- Pagination Links -->
+            <div class="mt-6">
+                {{ $products->links() }}
+            </div>
         </div>
     </section>
 </x-app-layout>
+
