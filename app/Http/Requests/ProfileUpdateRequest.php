@@ -1,4 +1,6 @@
 <?php
+/* The ProfileUpdateRequest class defines validation rules for updating user profile information in a
+Laravel application. */
 
 namespace App\Http\Requests;
 

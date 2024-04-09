@@ -1,4 +1,6 @@
 <?php
+/* The PasswordController class in a Laravel application handles updating a user's password securely. */
+
 
 namespace App\Http\Controllers\Auth;
 

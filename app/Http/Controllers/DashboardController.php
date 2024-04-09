@@ -1,4 +1,6 @@
 <?php
+/* The DashboardController class manages user-specific operations in a dashboard, such as displaying
+transactions and marking them as sent. */
 
 namespace App\Http\Controllers;
 

@@ -1,4 +1,6 @@
 <?php
+/* The TrustProxies class in a Laravel application defines trusted proxies and headers for proxy
+detection. */
 
 namespace App\Http\Middleware;
 

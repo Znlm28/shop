@@ -1,4 +1,6 @@
 <?php
+/* The ConfirmablePasswordController class in a Laravel application handles confirming the user's
+password before proceeding with certain actions. */
 
 namespace App\Http\Controllers\Auth;
 

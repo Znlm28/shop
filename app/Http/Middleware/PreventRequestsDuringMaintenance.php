@@ -1,4 +1,6 @@
 <?php
+/* This class extends a Laravel middleware to prevent requests during maintenance mode, with the
+ability to specify URIs that should remain reachable. */
 
 namespace App\Http\Middleware;
 

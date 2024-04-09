@@ -1,5 +1,7 @@
+<!-- Success alert component for notifying users when a review is successfully created -->
 <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex px-4 py-6 items-start z-[100]">
     <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
+        <!-- Container for the success alert -->
         <div x-cloak x-show="showSuccessWriteAlert" x-transition:enter="transform ease-out duration-300 transition"
             x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
             x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
@@ -7,7 +9,9 @@
             x-transition:leave-end="opacity-0"
             class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div class="p-4">
+                <!-- Alert content -->
                 <div class="flex items-start">
+                    <!-- Icon -->
                     <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true">
@@ -15,6 +19,7 @@
                                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
+                    <!-- Text content -->
                     <div class="ml-3 w-0 flex-1 pt-0.5">
                         <h3 class="text-lg font-medium text-text">Review created successfully!</h3>
                         <p class="mt-1 text-sm text-gray-500">Your review has been successfully created. We appreciate
@@ -22,6 +27,7 @@
                             your thoughts.
                         </p>
                     </div>
+                    <!-- Close button -->
                     <div class="ml-4 flex flex-shrink-0">
                         <button @click="showSuccessWriteAlert = false" type="button"
                             class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">

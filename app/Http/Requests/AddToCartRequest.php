@@ -1,4 +1,6 @@
 <?php
+/* The AddToCartRequest class extends FormRequest and defines validation rules for adding a product to
+the cart in a Laravel application. */
 
 namespace App\Http\Requests;
 

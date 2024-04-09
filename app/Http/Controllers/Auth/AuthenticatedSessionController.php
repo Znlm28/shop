@@ -1,4 +1,6 @@
 <?php
+/* The AuthenticatedSessionController class handles user authentication, login, and logout
+functionality in a Laravel application. */
 
 namespace App\Http\Controllers\Auth;
 

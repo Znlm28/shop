@@ -1,4 +1,6 @@
 <?php
+/* The VerifyCsrfToken class extends Middleware and specifies the URIs that should be excluded from
+CSRF verification. */
 
 namespace App\Http\Middleware;
 

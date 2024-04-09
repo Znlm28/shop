@@ -1,4 +1,6 @@
 <?php
+/* The FaqController class in PHP Laravel handles the display of the Frequently Asked Questions (FAQ)
+page by returning the FAQ view. */
 
 namespace App\Http\Controllers;
 

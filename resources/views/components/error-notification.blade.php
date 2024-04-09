@@ -1,3 +1,5 @@
+<!-- Thông báo lỗi -->
+
 <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex px-4 py-6 items-start z-[100]">
     <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
         <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show"
@@ -10,6 +12,7 @@
             <div class="p-4">
                 <div class="flex items-start">
                     <div class="flex-shrink-0">
+                        <!-- Biểu tượng lỗi -->
                         <svg class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -17,7 +20,9 @@
                         </svg>
                     </div>
                     <div class="ml-3 w-0 flex-1 pt-0.5">
+                        <!-- Tiêu đề lỗi -->
                         <h3 class="text-lg font-medium text-text">Error!</h3>
+                        <!-- Nội dung lỗi -->
                         <p class="mt-1 text-sm text-gray-500">{{ $slot }}</p>
                     </div>
                 </div>

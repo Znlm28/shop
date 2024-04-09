@@ -1,4 +1,6 @@
 <?php
+/* The `NewPasswordController` class handles the creation and storage of new passwords for user
+password resets in a Laravel application. */
 
 namespace App\Http\Controllers\Auth;
 

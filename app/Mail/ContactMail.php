@@ -1,4 +1,6 @@
 <?php
+/* The ContactMail class in PHP is responsible for constructing and sending contact form emails with
+provided data. */
 
 namespace App\Mail;
 

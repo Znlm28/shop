@@ -1,4 +1,5 @@
 <section>
+    <!-- Header -->
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Profile Information') }}
@@ -9,15 +10,18 @@
         </p>
     </header>
 
+    <!-- Send Verification Form -->
     <form id="send-verification" method="POST" action="{{ route('verification.send') }}">
         @csrf
     </form>
 
+    <!-- Profile Update Form -->
     <form enctype="multipart/form-data" method="POST" action="{{ route('profile.update', auth()->user()->id) }}"
         class="mt-6 space-y-6">
         @csrf
         @method('patch')
 
+        <!-- Profile Picture -->
         <div class="col-span-full" x-data="{ imagePreview: '{{ $profilePictureUrl }}' }">
             <label for="profile_picture" class="block text-sm font-medium leading-6 text-gray-900">Photo
                 <div class="mt-2 flex items-center gap-x-3 cursor-pointer">
@@ -44,6 +48,7 @@
             </label>
         </div>
 
+        <!-- Name Input -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)"
@@ -51,12 +56,14 @@
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
+        <!-- Email Input -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)"
                 required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
+            <!-- Email Verification -->
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                 <div>
                     <p class="text-sm mt-2 text-gray-800">
@@ -68,6 +75,7 @@
                         </button>
                     </p>
 
+                    <!-- Verification Status -->
                     @if (session('status') === 'verification-link-sent')
                         <p class="mt-2 font-medium text-sm text-green-600">
                             {{ __('A new verification link has been sent to your email address.') }}
@@ -77,6 +85,7 @@
             @endif
         </div>
 
+        <!-- Bio Input -->
         <div class="h-40 col-span-full" x-data="{ inputValue: '{{ old('bio', $user->profile->bio) }}' }">
             <div class="mt-2">
                 <x-input-label for="bio" :value="__('Bio')" />
@@ -86,10 +95,11 @@
             <p class="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
         </div>
 
-
+        <!-- Save Button -->
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
+            <!-- Status Message -->
             @if (session('status') === 'profile-updated')
                 <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600">{{ __('Saved.') }}</p>
@@ -99,6 +109,7 @@
 </section>
 
 <script>
+    // Script for initializing bio input value
     function bio() {
         return {
             inputValue: @json($user->profile->bio)

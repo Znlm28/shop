@@ -1,4 +1,6 @@
 <?php
+/* The CheckoutController class manages operations related to the shopping cart and checkout process in
+an e-commerce application. */
 
 namespace App\Http\Controllers;
 

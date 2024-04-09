@@ -1,4 +1,6 @@
 <?php
+/* The RegisteredUserController class handles user registration by displaying the registration view and
+processing incoming registration requests. */
 
 namespace App\Http\Controllers\Auth;
 

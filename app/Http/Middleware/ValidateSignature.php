@@ -1,4 +1,6 @@
 <?php
+/* The ValidateSignature class extends a Laravel middleware class and specifies query string parameters
+to be ignored during validation. */
 
 namespace App\Http\Middleware;
 

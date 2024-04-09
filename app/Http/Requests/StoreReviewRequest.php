@@ -1,4 +1,6 @@
 <?php
+/* The StoreReviewRequest class extends FormRequest and defines validation rules for storing a review
+with product_id, rating, and review fields. */
 
 namespace App\Http\Requests;
 

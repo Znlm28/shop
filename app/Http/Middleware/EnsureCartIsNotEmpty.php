@@ -1,4 +1,6 @@
 <?php
+/* The above class is a Laravel middleware named EnsureCartIsNotEmpty that redirects the user to the
+checkout page with an error message if their cart is empty. */
 
 namespace App\Http\Middleware;
 

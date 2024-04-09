@@ -1,4 +1,6 @@
 <?php
+/* This PHP class extends TrustHosts middleware in Laravel to define the host patterns that should be
+trusted. */
 
 namespace App\Http\Middleware;
 

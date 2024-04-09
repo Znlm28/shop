@@ -1,4 +1,6 @@
 <?php
+/* The SendOrderConfirmation class in PHP is responsible for constructing and sending an order
+confirmation email with user and transaction details, including a generated PDF attachment. */
 
 namespace App\Mail;
 

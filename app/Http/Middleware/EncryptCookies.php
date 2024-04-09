@@ -1,4 +1,6 @@
 <?php
+/* The EncryptCookies class extends Middleware and specifies the names of cookies that should not be
+encrypted. */
 
 namespace App\Http\Middleware;
 

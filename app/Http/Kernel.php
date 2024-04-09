@@ -1,4 +1,6 @@
 <?php
+/* The Kernel class in this PHP code defines the global HTTP middleware stack and route middleware
+groups for an application. */
 
 namespace App\Http;
 

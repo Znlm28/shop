@@ -1,16 +1,23 @@
+<!-- Kiểm tra xem người dùng đang đăng nhập và không phải chủ sở hữu sản phẩm -->
 @if (auth()->id() !== $product->artisan_id)
+    <!-- Kiểm tra xem số lượng sản phẩm có lớn hơn 0 -->
     @if ($product->quantity > 0)
+        <!-- Phần thêm vào giỏ hàng -->
         <div class="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
             <section aria-labelledby="options-heading">
                 <h2 id="options-heading" class="sr-only">Add to Cart</h2>
 
+                <!-- Form thêm vào giỏ hàng -->
                 <form method="POST" @submit.prevent="addToCart">
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <div class="mt-10">
+                        <!-- Nút thêm vào giỏ hàng -->
                         <button type="submit" :disabled="loading"
-                            class="flex w-full gap-2 items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 transition-all delay-[15ms] disabled:brightness-[.85]">Add
-                            to Cart <div x-show="loading" class="flex justify-center items-center" x-cloak>
+                            class="flex w-full gap-2 items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-accent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 transition-all delay-[15ms] disabled:brightness-[.85]">
+                            Add to Cart 
+                            <!-- Hiển thị biểu tượng loading khi đang thực hiện thêm vào giỏ hàng -->
+                            <div x-show="loading" class="flex justify-center items-center" x-cloak>
                                 <svg aria-hidden="true"
                                     class="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-white"
                                     viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +32,7 @@
                         </button>
                     </div>
                     <div class="mt-6 text-center">
+                        <!-- Link hiển thị chính sách bảo hành -->
                         <a href="#" class="group inline-flex text-base font-medium">
                             <svg class="mr-2 h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500 transition-all delay-[10ms]"
                                 fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

@@ -1,4 +1,6 @@
 <?php
+/* The above class is a FormRequest class in Laravel for handling login requests with authentication,
+rate limiting, and validation. */
 
 namespace App\Http\Requests\Auth;
 

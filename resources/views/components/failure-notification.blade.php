@@ -1,3 +1,5 @@
+<!-- Thông báo lỗi khi không thể thêm mục vào giỏ hàng -->
+
 <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex px-4 py-6 items-start z-[100]">
     <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
         <div x-cloak x-show="showFailureAlert" x-transition:enter="transform ease-out duration-300 transition"
@@ -9,6 +11,7 @@
             <div class="p-4">
                 <div class="flex items-start">
                     <div class="flex-shrink-0">
+                        <!-- Biểu tượng lỗi -->
                         <svg class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -16,11 +19,14 @@
                         </svg>
                     </div>
                     <div class="ml-3 w-0 flex-1 pt-0.5">
+                        <!-- Tiêu đề lỗi -->
                         <h3 class="text-lg font-medium text-text">Cannot Add Item to Cart</h3>
+                        <!-- Nội dung lỗi -->
                         <p class="mt-1 text-sm text-gray-500">Sorry, you cannot add more of this item to your cart.
                             Check the available quantity or contact support for more information.</p>
                     </div>
                     <div class="ml-4 flex flex-shrink-0">
+                        <!-- Nút đóng thông báo -->
                         <button @click="showFailureAlert = false" type="button"
                             class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                             <span class="sr-only">Close</span>

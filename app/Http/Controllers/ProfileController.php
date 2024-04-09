@@ -1,4 +1,6 @@
 <?php
+/* The ProfileController class manages user profile information, including displaying, editing,
+updating, and deleting user profiles. */
 
 namespace App\Http\Controllers;
 

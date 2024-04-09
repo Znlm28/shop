@@ -1,4 +1,6 @@
 <?php
+/* The above class is a middleware in PHP Laravel framework that ensures the user is an artisan before
+allowing access to certain routes. */
 
 namespace App\Http\Middleware;
 

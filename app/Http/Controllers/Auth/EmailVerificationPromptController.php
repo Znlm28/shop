@@ -1,4 +1,6 @@
 <?php
+/* The EmailVerificationPromptController class handles displaying the email verification prompt based
+on the user's email verification status. */
 
 namespace App\Http\Controllers\Auth;
 

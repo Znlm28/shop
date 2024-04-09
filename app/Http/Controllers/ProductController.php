@@ -1,4 +1,6 @@
 <?php
+/* The `ProductController` class in PHP handles operations related to products and their images,
+including listing, displaying, creating, updating, and deleting products. */
 
 namespace App\Http\Controllers;
 

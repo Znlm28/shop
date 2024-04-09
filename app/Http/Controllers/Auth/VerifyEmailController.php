@@ -1,4 +1,6 @@
 <?php
+/* The VerifyEmailController class in a Laravel application handles the verification of a user's email
+address and updates the user's profile accordingly. */
 
 namespace App\Http\Controllers\Auth;
 

@@ -1,4 +1,6 @@
 <?php
+/* The EmailVerificationNotificationController class handles sending a new email verification
+notification to users. */
 
 namespace App\Http\Controllers\Auth;
 

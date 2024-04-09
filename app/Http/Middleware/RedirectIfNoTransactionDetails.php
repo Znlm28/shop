@@ -1,4 +1,6 @@
 <?php
+/* The RedirectIfNoTransactionDetails middleware checks if valid transaction details are present in the
+session and redirects the user if not. */
 
 namespace App\Http\Middleware;
 

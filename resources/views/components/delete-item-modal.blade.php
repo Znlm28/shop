@@ -1,11 +1,15 @@
+<!-- Modal xác nhận xóa sản phẩm khỏi giỏ hàng -->
+
 <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0" x-cloak id="deleteConfirmationModal" x-show="openDeleteModal"
     aria-labelledby="modal-title" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
 
+    <!-- Lớp phủ nền -->
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
     </div>
 
+    <!-- Nội dung modal -->
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div x-transition:enter="ease-out duration-300"
             x-transition:enter-start="opacity-0 transform translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -19,6 +23,7 @@
                 <div class="sm:flex sm:items-start">
                     <div
                         class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                        <!-- Biểu tượng đỏ để chỉ việc xóa sản phẩm khỏi giỏ hàng -->
                         <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -26,12 +31,15 @@
                         </svg>
                     </div>
                     <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                        <!-- Tiêu đề modal -->
                         <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Delete Product from
                             Cart</h3>
                         <div class="mt-2 font-normal">
+                            <!-- Nội dung xác nhận xóa sản phẩm -->
                             <p class="text-sm text-gray-500">Are you sure you want to delete the item from your shopping
                                 cart?</p>
                         </div>
+                        <!-- Nút xóa và nút hủy -->
                         <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                             <button @click="removeFromCart(itemToDelete); openDeleteModal = false" type="button"
                                 class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Delete</button>

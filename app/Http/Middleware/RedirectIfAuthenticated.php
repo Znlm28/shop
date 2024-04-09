@@ -1,4 +1,6 @@
 <?php
+/* The RedirectIfAuthenticated class is a middleware in a PHP Laravel application that redirects
+authenticated users to the home route. */
 
 namespace App\Http\Middleware;
 

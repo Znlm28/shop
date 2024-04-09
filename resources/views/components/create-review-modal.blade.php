@@ -1,11 +1,15 @@
+<!-- Modal cho việc sửa đánh giá -->
+
 <div x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0" x-cloak id="writeReviewModal" x-show="writingReview" aria-labelledby="modal-title"
     class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
 
+    <!-- Lớp phủ nền -->
     <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
     </div>
 
+    <!-- Nội dung modal -->
     <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div x-transition:enter="ease-out duration-300"
             x-transition:enter-start="opacity-0 transform translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -19,6 +23,7 @@
                 <div class="sm:flex sm:items-start">
                     <div
                         class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                        <!-- Biểu tượng xanh để chỉ việc đánh giá đã được sửa -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-green-600">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -26,12 +31,15 @@
                         </svg>
                     </div>
                     <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+                        <!-- Tiêu đề modal -->
                         <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Edit Review</h3>
                         <div class="mt-2 font-normal">
                             <div class="mt-2">
                                 <div>
+                                    <!-- Form để đánh giá sản phẩm -->
                                     <label for="rating" class="block text-sm font-medium text-gray-700">Rating</label>
                                     <div id="rating" class="flex justify-center sm:justify-start">
+                                        <!-- Biểu tượng ngôi sao để chọn điểm đánh giá -->
                                         <template x-for="i in 5" :key="i">
                                             <svg @click="rating = i" class="h-5 w-5 flex-shrink-0 cursor-pointer"
                                                 :class="{ 'text-yellow-400': i <= rating, 'text-gray-300': i > rating }"
@@ -44,6 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4">
+                                    <!-- Ô nhập nội dung đánh giá -->
                                     <label for="writeReviewText" class="block text-sm font-medium text-gray-700">Your
                                         Review</label>
                                     <textarea id="writeReviewText" x-model="review" rows="4"
@@ -51,6 +60,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Nút submit và cancel -->
                         <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                             <button @click="submitReview" type="button"
                                 class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto">Submit</button>

@@ -1,4 +1,6 @@
 <?php
+/* The above class is a PHP controller class that extends the BaseController and utilizes traits for
+authorizing and validating requests. */
 
 namespace App\Http\Controllers;
 

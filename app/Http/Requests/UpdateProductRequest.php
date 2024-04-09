@@ -1,4 +1,6 @@
 <?php
+/* The UpdateProductRequest class defines validation rules and authorization for updating product
+information in a Laravel application. */
 
 namespace App\Http\Requests;
 

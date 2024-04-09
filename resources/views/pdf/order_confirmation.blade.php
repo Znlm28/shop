@@ -7,11 +7,15 @@
 </head>
 
 <body style="font-family: 'Verdana', sans-serif; background-color: white; color: #333;">
+    <!-- Container for order details -->
     <div style="display: block; max-width: 600px; margin: auto; padding: 20px;">
+        <!-- Title -->
         <h1 style="font-size: 24px; color: #333; margin-bottom: 10px;">Thanks for ordering</h1>
+        <!-- Introduction message -->
         <p style="font-size: 14px; color: #555; margin-bottom: 20px;">We appreciate your order, the artisan is currently
             processing it.</p>
 
+        <!-- Buyer information -->
         @php
             $orderPayment = 0;
             $shipping = 0;
@@ -34,11 +38,13 @@
             </div>
         @endif
 
+        <!-- Order items loop -->
         @foreach ($transactionDetails as $transaction)
             @php
                 $orderPayment += $transaction->product->price * $transaction->quantity;
                 $shipping = $transaction->delivery_method === 'Standard' ? 4.99 : 12.99;
             @endphp
+            <!-- Individual order item -->
             <div style="border-bottom: 1px solid #ddd; padding: 8px; display: flex;">
                 <img src="{{ storage_path('app/public/' . $transaction->product->images->first()->thumbnail_image_path) }}"
                     alt="Product Image" style="width: 100px; height: 100px; object-fit: cover; border-radius: 4px;">
@@ -50,6 +56,7 @@
             </div>
             <hr>
         @endforeach
+        <!-- Shipping and total -->
         <div style="margin-top: 20px; text-align: right;">
             <p style="font-size: 14px; color: #555;">Shipping: {{ $shipping }} €</p>
             <strong style="font-size: 16px; color: #333;">Total: {{ number_format($orderPayment, 2) + $shipping }}

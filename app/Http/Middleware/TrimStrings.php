@@ -1,4 +1,6 @@
 <?php
+/* The TrimStrings class extends Laravel's Middleware class and specifies attributes that should not be
+trimmed during HTTP requests. */
 
 namespace App\Http\Middleware;
 

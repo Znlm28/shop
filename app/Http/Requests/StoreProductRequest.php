@@ -1,4 +1,6 @@
 <?php
+/* The StoreProductRequest class defines validation rules and authorization for storing product
+information in a Laravel application. */
 
 namespace App\Http\Requests;
 

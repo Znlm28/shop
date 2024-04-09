@@ -1,4 +1,6 @@
 <?php
+/* The UpdateCartRequest class extends FormRequest in Laravel and defines validation rules for updating
+a cart item quantity. */
 
 namespace App\Http\Requests;
 

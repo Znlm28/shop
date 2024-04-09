@@ -1,4 +1,6 @@
 <?php
+/* This class is a middleware in a PHP Laravel application that handles authentication and redirects
+users to the login page if they are not authenticated. */
 
 namespace App\Http\Middleware;
 

@@ -1,4 +1,6 @@
 <?php
+/* The ReviewController class in a Laravel application handles operations related to creating,
+updating, and deleting reviews for products. */
 
 namespace App\Http\Controllers;
 

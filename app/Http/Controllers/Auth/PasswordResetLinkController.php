@@ -1,4 +1,6 @@
 <?php
+/* The `PasswordResetLinkController` class in a Laravel application handles the display and submission
+of password reset link requests. */
 
 namespace App\Http\Controllers\Auth;
 

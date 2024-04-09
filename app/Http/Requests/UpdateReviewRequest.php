@@ -1,4 +1,6 @@
 <?php
+/* The UpdateReviewRequest class extends FormRequest in Laravel and contains authorization and
+validation rules for updating a review. */
 
 namespace App\Http\Requests;
 

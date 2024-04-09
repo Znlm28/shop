@@ -1,3 +1,5 @@
+<!-- Thông báo thành công khi xóa sản phẩm khỏi giỏ hàng -->
+
 <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex px-4 py-6 items-start z-[100]">
     <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
         <div x-cloak x-show="showSuccessDeleteAlert" x-transition:enter="transform ease-out duration-300 transition"
@@ -9,6 +11,7 @@
             <div class="p-4">
                 <div class="flex items-start">
                     <div class="flex-shrink-0">
+                        <!-- Biểu tượng xanh thể hiện thành công -->
                         <svg class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -16,12 +19,15 @@
                         </svg>
                     </div>
                     <div class="ml-3 w-0 flex-1 pt-0.5">
+                        <!-- Tiêu đề thông báo -->
                         <h3 class="text-lg font-medium text-text">Removed Item from Cart</h3>
+                        <!-- Nội dung thông báo -->
                         <p class="mt-1 text-sm text-gray-500">The product has been successfully removed from your cart!
                             Checkout our other awesome products.
                         </p>
                     </div>
                     <div class="ml-4 flex flex-shrink-0">
+                        <!-- Nút đóng thông báo -->
                         <button @click="showSuccessDeleteAlert = false" type="button"
                             class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                             <span class="sr-only">Close</span>

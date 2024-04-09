@@ -1,4 +1,5 @@
 <?php
+/* The CheckoutRequest class in PHP handles authorization and validation rules for checkout data. */
 
 namespace App\Http\Requests;
 

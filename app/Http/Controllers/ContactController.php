@@ -1,4 +1,6 @@
 <?php
+/* The ContactController class in PHP handles sending emails from contact forms by validating the
+request data and sending an email using the provided information. */
 
 namespace App\Http\Controllers;
 

@@ -1,25 +1,38 @@
+<!-- Đây là một trang hiển thị thông báo thành công sau khi thanh toán thành công -->
+
 <x-app-layout>
+
+    <!-- Kiểm tra nếu có thông tin chi tiết giao dịch trong session và đó là một mảng -->
     @if (session('transactionDetails') && is_array(session('transactionDetails')))
+    
+        <!-- Khởi tạo biến cho phí vận chuyển và tổng thanh toán -->
         @php
             $shippingCost = 0;
             $orderPayment = 0;
         @endphp
+
+        <!-- Phần chính của trang -->
         <main class="relative lg:min-h-full">
+            <!-- Hình ảnh minh họa -->
             <div class="h-80 overflow-hidden lg:absolute lg:h-[90%] lg:w-1/2 lg:pr-4 xl:pr-12">
                 <img src="{{ URL('images/checkout.jpg') }}" alt="Checkout image"
                     class="h-full w-full object-cover object-center">
             </div>
 
+            <!-- Phần hiển thị thông báo thành công và chi tiết đơn hàng -->
             <div>
                 <div
                     class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 xl:gap-x-24">
                     <div class="lg:col-start-2">
+                        <!-- Tiêu đề -->
                         <h1 class="text-sm font-medium text-primary">Payment successful</h1>
                         <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Thanks for ordering
                         </p>
                         <p class="mt-2 text-base text-gray-500">We appreciate your order, the artisan is currently
                             processing it. So
                             hang tight and we'll send you confirmation very soon!</p>
+                        
+                        <!-- Danh sách các mặt hàng trong đơn hàng -->
                         <ul role="list"
                             class="mt-6 divide-y divide-gray-200 border-t border-gray-200 text-sm font-medium text-gray-500">
                             @foreach (session('transactionDetails') as $transaction)
@@ -44,6 +57,7 @@
                             @endforeach
                         </ul>
 
+                        <!-- Tổng số tiền và phí vận chuyển -->
                         <dl class="space-y-6 border-t border-gray-200 pt-6 text-sm font-medium text-gray-500">
                             <div class="flex justify-between">
                                 <dt>Subtotal</dt>
@@ -60,6 +74,7 @@
                             </div>
                         </dl>
 
+                        <!-- Địa chỉ giao hàng -->
                         <dl class="mt-16 grid grid-cols-2 gap-x-4 text-sm text-gray-600">
                             <div>
                                 <dt class="font-medium text-gray-900">Shipping Address</dt>
@@ -72,6 +87,7 @@
 
                         </dl>
 
+                        <!-- Liên kết để tiếp tục mua sắm -->
                         <div class="mt-16 border-t border-gray-200 py-6 text-right">
                             <a href="{{ route('products.index') }}"
                                 class="text-sm font-medium text-primary hover:text-accent">
@@ -83,8 +99,12 @@
                 </div>
             </div>
         </main>
+
+        <!-- Xóa thông tin chi tiết giao dịch khỏi session sau khi hiển thị -->
         @php
             session()->forget('transactionDetails');
         @endphp
+
     @endif
+
 </x-app-layout>
